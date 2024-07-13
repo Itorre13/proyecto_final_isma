@@ -410,13 +410,6 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.senderista{
-    position:fixed;
-    left:20px;
-    bottom:45px;
-    width:80px;
-    z-index:1;
-}
 footer a{
     text-decoration: none;
 }
@@ -442,10 +435,54 @@ footer button{
     border:none;
     border-radius:15px;
     padding:5px;
-    margin-left:25px;
+    margin-left:20px;
+}
+footer button input{
+    margin-left:10px;
 }
 footer button .fa-solid{
     color:#2f272A;
     cursor:pointer;
     margin-left:5px;
+}
+.senderista{
+    position:fixed;
+    left:20px;
+    bottom:45px;
+    width:40px;
+    z-index:1;
+    rotate:0px;
+    cursor:pointer;
+}
+.movimiento{
+    animation:movimiento 20s linear;
+}
+.senderista:last-child{
+    margin-left:60px;
+    width:47px;
+}
+.contenedor_senderistas{
+    width:100%;
+}
+@keyframes movimiento{
+    0%{
+        left:0px;
+        rotate:-5deg;
+    }
+    20%{
+        rotate:5deg;
+    }
+    40%{
+        rotate:7deg;
+    }
+    60%{
+        rotate:-7deg;
+    }
+    80%{
+        rotate:8deg;
+    }
+    100%{
+        left:100%;
+        rotate:-4deg;
+    }
 }
