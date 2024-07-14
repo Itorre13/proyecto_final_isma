@@ -76,11 +76,11 @@ cerrar.addEventListener("click", () => {
 
 //funciones abrir-cerrar navegador movil
 
-const navegacion = document.querySelector(".header_principal_movil");
-const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil")
+const navegacion = document.getElementById("header_principal_movil");
+var botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil");
 
 function toggleNavegacion(){
-    navegacion.classList.toggle("desplegado");
-    
+    navegacion.setAttribute("id","header_principal_movil desplegado");
 }
+
 botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));
