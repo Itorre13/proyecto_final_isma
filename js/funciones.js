@@ -57,7 +57,8 @@ flechas.forEach((flecha,i) => {
 });
 
 
-//funciones formulario - consulta enviada 
+//funciones formulario - consulta enviada
+
 const enviarConsulta = document.querySelector('form input[type="submit"]');
 const consultaEnviada = document.querySelector(".modal_consulta");
 const formulario = document.querySelector("form");
@@ -72,3 +73,14 @@ enviarConsulta.addEventListener("click", evento => {
 cerrar.addEventListener("click", () => {
     consultaEnviada.classList.remove("visible");
 });
+
+//funciones abrir-cerrar navegador movil
+
+const navegacion = document.querySelector(".header_principal_movil");
+const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil")
+
+function toggleNavegacion(){
+    navegacion.classList.toggle("desplegado");
+    
+}
+botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));

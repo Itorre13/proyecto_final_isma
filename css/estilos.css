@@ -1,15 +1,22 @@
 *{
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 body{
-    font-family:"Archivo", sans-serif;
-    font-optical-sizing:auto;
-    font-weight:200;
-    font-style:normal;
-    background-image:linear-gradient(to top, #fff3e1, white);
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    background-image: linear-gradient(to top, #fff3e1, white);
 }
-.header_principal, .header_secundario{
+button, input{
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+/*cabeceras principal y secundaria*/
+
+.header_principal, .header_secundario{ 
     position:fixed;
     top:0px;
     left:0px;
@@ -27,11 +34,12 @@ body{
     flex-direction:row;
     height:180px;
     transition: top 500ms;
-}.header_principal .fa-person-hiking{
+}
+.header_principal .fa-person-hiking, .header_secundario .fa-person-hiking{
     color:#cf5533;
 }
-.header_secundario .fa-person-hiking{
-    color:#cf5533;
+.abrir_header_movil,.cerrar_header_movil,.header_principal_movil{
+    display:none
 }
 .logo_inicio{
     width:150px;
@@ -82,7 +90,7 @@ ul ul{
     cursor:pointer;
 }
 ul ul li{
-    float:none;
+    display:none;
     width:91%;
     display:flex;
     justify-content:center;
@@ -107,19 +115,8 @@ ul li:hover ul{
 .seleccionado i, .seleccionado span{
     color:white;
 }
-.pg_inicio{
-    height:100vh;
-    background:url("../img/img_1.jpg") no-repeat center;
-    background-size:cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.pg_inicio h2{
-    font-size: 2rem;
-    color:white;
-}
 .img_fondo{
+    display:block;
     width:100%;
     height:180px;
     background:url("../img/img_fondo_rutas.jpg") no-repeat center;
@@ -134,6 +131,27 @@ ul li:hover ul{
 .img_fondo_contacto{
     background:url("../img/img_fondo_contacto.png") no-repeat center;
 }
+
+/*página inicio*/
+
+.pg_inicio{
+    height:100vh;
+    background:url("../img/img_1.jpg") no-repeat center;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.pg_inicio h2{
+    font-size: 2rem;
+    color:white;
+    text-shadow: 1px 1px 10px #2f272a;
+}
+
+/*secciones internas*/
+
+/*páginas rutas y entorno*/
+
 .contenedor_rutas, .contenedor_entorno{
     margin:50px auto 100px;
     width:1200px;
@@ -197,12 +215,14 @@ ul li:hover ul{
 }
 .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
     margin:25px auto 25px;
-    border-top:1px solid #2f272a;
     padding:20px 0px;
 }
 .margin-top-20px{
     margin-top:20px;
 }
+
+/*páginas galeria y mapas*/
+
 .galeria,.mapas{
     margin:50px auto 100px;
     width:70%;
@@ -237,10 +257,6 @@ ul li:hover ul{
     justify-content:center;
     align-items:center;
     z-index:2;
-}
-button, input{
-    -webkit-appearance:none;
-    appearance:none;
 }
 .modal_galeria button{
     display:block;
@@ -295,6 +311,9 @@ button, input{
 .enlace-mapa span{
     margin-right:10px;
 }
+
+/*página contacto*/
+
 .formulario, .texto_localizador_contacto{
     width:1200px;
     margin:50px auto 50px;
@@ -400,15 +419,18 @@ input[type="submit"]:hover{
 .visible{
     display:flex;
 }
+
+/*pie de página*/
+
 footer{
     position:fixed;
     width:100%;
     bottom:0;
     background-color:#2f272A;
-    padding: 10px;
+    padding:10px;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
 }
 footer a{
     text-decoration: none;
@@ -429,22 +451,32 @@ footer .fa-brands{
     cursor: pointer;
     color: white;
 }
-footer button{
+.caja_busqueda{
     display:block;
+    width:180px;
     background-color:white;
     border:none;
     border-radius:15px;
     padding:5px;
     margin-left:20px;
 }
-footer button input{
+.caja_busqueda button{
+    background-color: transparent;
+    border:none;
+}
+.caja_busqueda input{
+    background-color:transparent;
+    width:75%;
     margin-left:10px;
 }
-footer button .fa-solid{
+.caja_busqueda .fa-solid{
     color:#2f272A;
     cursor:pointer;
     margin-left:5px;
 }
+
+/*animación senderistas*/
+
 .senderista{
     position:fixed;
     left:20px;
@@ -453,6 +485,7 @@ footer button .fa-solid{
     z-index:1;
     rotate:0px;
     cursor:pointer;
+    text-shadow: 1px 1px 10px #2f272a;
 }
 .movimiento{
     animation:movimiento 20s linear;
@@ -484,5 +517,243 @@ footer button .fa-solid{
     100%{
         left:100%;
         rotate:-4deg;
+    }
+}
+
+/*media queries*/
+
+ /*estilos para pantallas hasta 1200px */
+ 
+@media screen and (max-width:1200px){
+    nav a{
+        font-size:1rem;
+    }
+    nav li:not(:last-child){
+        margin-right:20px;
+    }
+    ul ul{
+        left:-1rem;
+        width:130px;
+    }
+    ul ul li{
+        width:82%;
+    }
+    ul ul a{
+        font-size:0.6rem;
+        font-weight:300;
+    }
+    .contenedor_rutas, .contenedor_entorno{
+        margin:50px auto 50px;
+        width:800px;
+    }
+    .contenedor_rutas h3, .contenedor_entorno h3{
+        display:block;
+        font-size:1rem;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        width:150px;
+        height:150px;
+    }
+    .bloque_ruta h2{
+        font-size: 1rem;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        display:inline-block;
+        padding:20px;
+        width:200px;
+        height:200px;
+    }
+}
+
+ /*estilos para pantallas hasta 801px */
+
+@media screen and (max-width:801px){
+    nav a{
+        font-size:0.8rem;
+    }
+    nav li:not(:last-child){
+        margin-right:20px;
+    }
+    ul ul{
+        left:-1rem;
+        width:130px;
+    }
+    ul ul li{
+        width:82%;
+    }
+    ul ul a{
+        font-size:0.6rem;
+        font-weight:300;
+    }
+    .contenedor_rutas, .contenedor_entorno{
+        margin:50px auto 50px;
+        width:500px;
+    }
+    .contenedor_rutas h3, .contenedor_entorno h3{
+        display:block;
+        font-size:1rem;
+    }
+    .derecha_cabecera_ruta{
+        width:240px;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        width:100px;
+        height:100px;
+    }
+    .bloque_ruta h2{
+        font-size: 1rem;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        display:inline-block;
+        padding:20px;
+        width:200px;
+        height:200px;
+    }
+}
+
+ /*estilos para pantallas hasta 650px */
+ 
+
+@media screen and (max-width:650px){
+    .header_principal{
+        height:250px;
+    }
+    .header_principal nav{
+        display:none;
+    }
+    .header_principal nav ul{
+        display:none;
+    }
+    .header_principal nav:last-child{
+        display:block;
+    }
+    .header_principal_movil{
+        display:block;
+        position:fixed;
+        background-color: blue;
+        position:fixed;
+        width:calc(100% - 40px);
+        height:calc(100vh - 40px);
+        top:-100vh;
+        left:0;
+        padding:20px;
+        transition:top 0.8s;
+    }
+    .desplegado{
+        top:0;
+        z-index:2
+    }
+    .header_principal_movil ul{
+        display:block;
+    }
+    .header_principal_movil li:not(:last-child){
+        margin-right: 0px;
+    }
+    .header_principal_movil li:not(:first-child){
+        margin-top: 20px;
+    }
+    .header_principal_movil a{
+        font-size: 0.6rem;
+        color: white;
+    }
+    .cerrar_header_movil{
+        display:block;
+        border:none;
+        border-radius:20px;
+        color:#cf5533;
+        background-color:transparent;
+        cursor:pointer;
+        position:absolute;
+        top:20px;
+        left:20px;
+    }
+    .abrir_header_movil{
+        display:block;
+        width:250px;
+        border:1px solid rgba(255,255,255,0.8);
+        border-radius:20px;
+        background-color:rgba(255,255,255,0.6);
+        padding:5px;
+        cursor:pointer;
+        width:80px;
+        cursor:pointer;
+    }
+    .logo_inicio{
+        width:100px;
+    }
+    .pg_inicio{
+        height:100vh;
+        flex-direction:column;
+        justify-content:flex-end;
+    }
+    .pg_inicio h2{
+        font-size:1.5rem;
+        margin-bottom:170px;
+    }
+    .contenedor_rutas, .contenedor_entorno{
+        margin:20px auto 20px;
+        width:300px;
+    }
+    .contenedor_rutas h3, .contenedor_entorno h3{
+        display:block;
+        font-size:1rem;
+    }
+    .derecha_cabecera_ruta{
+        width:240px;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        width:100px;
+        height:100px;
+    }
+    .bloque_ruta h2{
+        font-size: 1rem;
+    }
+    .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
+        margin:0px;
+    }
+    .img_rutas{
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+    .contenedor_rutas img, .contenedor_entorno img{
+        display:inline-block;
+        padding:20px;
+        width:450px;
+        height:450px;
+    }
+    footer{
+        height:15vh;
+        flex-direction:column;
+        justify-content: space-around;
+        padding: 3px;
+    }
+    footer .fa-brands{
+        margin-right:10px;
+    }
+    .redes_sociales, .texto_footer{
+        font-size:0.8rem;
+    }
+    .redes_sociales, .texto_footer, .caja_busqueda{
+        margin-top:5px;
+    }
+    .caja_busqueda{
+        width:120px;
+        margin-left:0px;
+    }
+    .caja_busqueda input{
+        width:76%;
+        margin-left:3px;
+    }
+    footer button .fa-solid{
+        font-size:0.7rem;
+    }
+    .senderista{
+        width:25px;
+        bottom:15vh;
+        left:5px;
+    }
+    .senderista:last-child{
+        width:28px;
+        left:-25px;
     }
 }

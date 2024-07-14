@@ -43,6 +43,39 @@
                 </li>
             </ul>
         </nav><!--final menú barra navegador-->
+        <section class="header_secundario_movil">
+            <i class="fa-solid fa-bars">
+                 <nav class="nav_movil"><!--comienzo menú barra navegador-->
+                    <ul>
+                        <li><a href="rutas.html"><i class="fa-solid fa-location-dot"></i><span>rutas</span></a>
+                            <ul><!--comienzo menú desplegable-->
+                                <li><a href="rutas.html#1"><i class="fa-solid fa-person-hiking"></i> Ruta 1<br>Camino Real-Puente Olario</a></li>
+                                <li><a href="rutas.html#2"><i class="fa-solid fa-person-hiking"></i> Ruta 2<br>Barregana-La Puebla</a></li>
+                                <li><a href="rutas.html#3"><i class="fa-solid fa-person-hiking"></i> Ruta 3<br>Huerto del Cura-Nava de Béjar</a></li>
+                                <li><a href="rutas.html#4"><i class="fa-solid fa-person-hiking"></i> Ruta 4<br>La ermita-Sierra de Tonda</a></li>
+                                <li><a href="rutas.html#5"><i class="fa-solid fa-person-hiking"></i> Ruta 5<br>Huerta de las Monjas-Senda de los burros</a></li>
+                            </ul><!--final menú desplegable-->
+                        </li>
+                        <li class="seleccionado"><a href="entorno.html"><i class="fa-solid fa-location-dot"></i><span>entorno</span></a><!--enlace seleccionado-->
+                            <ul><!--comienzo menú desplegable-->
+                                <li><a href="entorno.html#1">· Fuentes de Béjar</a></li>
+                                <li><a href="entorno.html#2">· Geología y relieve</a></li>
+                                <li><a href="entorno.html#3">· Flora</a></li>
+                                <li><a href="entorno.html#4">· Fauna</a></li>
+                            </ul><!--final menú desplegable--> 
+                        </li>  
+                        <li><a href="galeria.html"><i class="fa-solid fa-location-dot"></i><span>galeria</span></a></li>
+                        <li><a href="mapas.html"><i class="fa-solid fa-location-dot"></i><span>mapas</span></a></li>
+                        <li><a href="contacto.html"><i class="fa-solid fa-location-dot"></i><span>contacto</span></a>
+                            <ul>
+                                <li><a href="contacto.html#1">· Formulario contacto</a></li>
+                                <li><a href="contacto.html#2">· Dirección</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav><!--final menú barra navegador-->
+            </i>
+        </section>
     </header>
     <section class="contenedor img_fondo img_fondo_entorno">
     </section>
@@ -139,16 +172,19 @@
         </div>
     </section>
     <footer>
-        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="redes_sociales">
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
         <a href="#" class="texto_footer">
             <p>sangusin</p>
             <p>rutas-senderismo</p>
         </a>
-        <button>
-            <input type="text" placeholder="buscar"><i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <form class="caja_busqueda">
+            <input type="text" placeholder="buscar">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     </footer>
     <div class="contenedor_senderistas"><!-- comienzo contenedor animación senderistas -->
         <img class="senderista" src="img/hiker_1.svg" alt="senderista"><!-- senderistas_1 -->
