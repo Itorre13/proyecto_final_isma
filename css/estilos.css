@@ -1,15 +1,16 @@
 /* ESTILOS GENERALES */
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin:0px;
+    padding:0px;
 }
 body{
-    font-family: "Archivo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    background-image: linear-gradient(to top, #fff3e1, white);
+    font-family:"Archivo", sans-serif;
+    font-optical-sizing:auto;
+    font-weight:200;
+    font-style:normal;
+    background-image:linear-gradient(to top, #fff3e1, white);
+    text-align:justify;
 }
 button, input{
     -webkit-appearance:none;
@@ -18,7 +19,7 @@ button, input{
 
 /* ESTILOS CABECERA PRINCIPAL Y CABECERA SECUNDARIA */
 
-.header_principal, .header_secundario{ 
+.header_principal,.header_secundario{ 
     position:fixed;
     top:0px;
     left:0px;
@@ -35,9 +36,9 @@ button, input{
 .header_secundario{
     flex-direction:row;
     height:180px;
-    transition: top 500ms;
+    transition:top 500ms;
 }
-.header_principal .fa-person-hiking, .header_secundario .fa-person-hiking{
+.header_principal .fa-person-hiking,.header_secundario .fa-person-hiking{
     color:#cf5533;
 }
 .abrir_header_movil,.cerrar_header_movil{
@@ -49,37 +50,37 @@ button, input{
 .header_secundario .logo_inicio{
     width:100px;
 }
-nav ul{
+.navegacion ul{
     list-style:none;
     display:flex;
 }
-nav a{
+.navegacion a{
     text-decoration:none;
     color:black;
     font-size:1.3rem;
     font-weight:500;
 }
-nav li{
+.navegacion li{
     display:block;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color:rgba(255,255,255,0.6);
+    background-color:rgba(255,255,255,0.8);
     padding:10px;
     cursor:pointer;
     box-shadow:1px 1px 5px -1px #2f272a;
     transition:transform 0.7s;
 }
-nav li:hover{
+.navegacion li:hover{
     transform:scale(1.3);
 }
-nav li:not(:last-child){
+.navegacion li:not(:last-child){
     margin-right:40px;
 }
-nav .fa-location-dot{
+.navegacion .fa-location-dot{
     color:rgba(207,85,51,0.8);
     margin-right:0.3rem;
 }
-ul ul{
+.navegacion ul ul{
     display:none;
     position:absolute;
     top:100%;
@@ -91,31 +92,34 @@ ul ul{
     padding:5px;
     cursor:pointer;
 }
-ul ul li{
+.navegacion ul ul li{
     display:none;
     width:91%;
     display:flex;
     justify-content:center;
     align-items:center;
 }
-ul ul li:not(:first-child){
+.navegacion ul ul li:not(:first-child){
     margin-top:5px;
 }
-ul ul a{
+.navegacion ul ul a{
     text-align:center;
     line-height:120%;
     color:black;
     font-size:0.7rem;
     font-weight:500;
 }
-ul li:hover ul{
+.navegacion ul li:hover ul{
     display:block;
 }
-.seleccionado{
+#seleccionado{
     background-color:#f6b233;
 }
-.seleccionado i, .seleccionado span{
+#seleccionado i,#seleccionado span{
     color:white;
+}
+#seleccionado .fa-person-hiking{
+    color:#cf5533;
 }
 
 /* PIE DE PAGINA */
@@ -131,23 +135,23 @@ footer{
     align-items:center;
 }
 footer a{
-    text-decoration: none;
+    text-decoration:none;
 }
 .texto_footer{
-    font-size: 0.8em;
+    font-size:0.8em;
     font-weight:400;
-    text-transform: uppercase;
-    color: white;
+    text-transform:uppercase;
+    color:white;
     display:flex;
 }
 .texto_footer :last-child{
-    color: #cf5533;
-    margin-left: 10px;
+    color:#cf5533;
+    margin-left:10px;
 }
 footer .fa-brands{
     margin-right:20px;
-    cursor: pointer;
-    color: white;
+    cursor:pointer;
+    color:white;
 }
 .caja_busqueda{
     display:block;
@@ -159,7 +163,7 @@ footer .fa-brands{
     margin-left:20px;
 }
 .caja_busqueda button{
-    background-color: transparent;
+    background-color:transparent;
     border:none;
 }
 .caja_busqueda input{
@@ -182,13 +186,13 @@ footer .fa-brands{
     width:40px;
     rotate:0px;
     cursor:pointer;
-    text-shadow: 1px 1px 10px #2f272a;
+    text-shadow:1px 1px 10px #2f272a;
 }
 .movimiento{
-    animation:movimiento 20s linear;
+    animation:movimiento 10s cubic-bezier(.07,.19,.69,.63);
 }
 .senderista:last-child{
-    margin-left:60px;
+    left:60px;
     width:47px;
 }
 .contenedor_senderistas{
@@ -196,7 +200,7 @@ footer .fa-brands{
 }
 @keyframes movimiento{
     0%{
-        left:0px;
+        left:20px;
         rotate:-5deg;
     }
     20%{
@@ -228,9 +232,11 @@ footer .fa-brands{
     align-items:center;
 }
 .pg_inicio h2{
-    font-size: 2rem;
+    font-size:2rem;
     color:white;
-    text-shadow: 1px 1px 10px #2f272a;
+    text-shadow:1px 1px 10px #2f272a;
+    text-align:center;
+    padding-top:150px;
 }
 
     /* SECCIONES INTERNAS */
@@ -273,7 +279,7 @@ footer .fa-brands{
 .derecha_cabecera_ruta{
     width:300px;
     display:flex;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 .derecha_cabecera_ruta div{
     display:flex;
@@ -292,18 +298,16 @@ footer .fa-brands{
 .bloque_ruta{
     width:100%;
 }
-.img_rutas{
-    display: flex;
-    justify-content: space-evenly;
+.img_rutas,.img_entorno{
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
 }
 .contenedor_rutas img, .contenedor_entorno img{
     display:inline-block;
-    padding: 20px;
+    padding:20px;
     width:300px;
     height:300px;
-}
-.contenedor_rutas p, .contenedor_entorno p{
-    text-align:justify;
 }
 .contenedor_entorno h2{
     padding:0px 0px 20px;
@@ -327,9 +331,9 @@ footer .fa-brands{
 
 .galeria,.mapas{
     margin:50px auto 100px;
-    width:70%;
+    width:90%;
     display:grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns:repeat(4,auto);
     gap:20px;
 }
 .galeria img,.enlace-mapa{
@@ -420,18 +424,30 @@ footer .fa-brands{
     background:url("../img/img_fondo_contacto.png") no-repeat center;
 }
 .formulario, .texto_localizador_contacto{
-    width:1200px;
-    margin:50px auto 50px;
+    width:calc(100% - 100px);
+    margin:50px auto 0px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     align-items:center;
 }
+.texto_localizador_contacto{
+    margin:0px auto 50px;
+}
 .formulario h2, .texto_localizador_contacto h2{
     display:block;
     font-size:3rem;
 }
-.texto_localizador_contacto p{
+.texto_localizador_contacto h2{
+    margin-top:20px;
+}
+.texto_localizador_contacto .border{
+    padding:25px 0px;
+    border-top:2px solid #cf5533;
+    border-bottom:2px solid #cf5533;
+
+}
+.texto_localizador_contacto p:nth-child(3){
     margin-top:20px;
 }
 .texto_localizador_contacto iframe{
@@ -443,14 +459,13 @@ form{
     flex-direction:column;
     align-items:center;
     padding-bottom:30px;
-    border-bottom:1px solid #2f272a;
 }
 .formulario input{
     display:block;
     border-radius:5px;
     padding:10px;
     margin-top:20px;
-    background-color: white;
+    background-color:white;
     border:1px solid #2f272a;
 }
 .formulario input[type="text"]{
@@ -460,9 +475,9 @@ form{
     height:60px;
 }
 .formulario input[type="submit"]{
-    background-color: #2f272a;
+    background-color:#2f272a;
     color:white;
-    width: 150px;
+    width:150px;
     height:40px;
     cursor:pointer;
     box-shadow:1px 1px 5px -1px #2f272a;
@@ -496,7 +511,7 @@ input[type="submit"]:hover{
 }
 .consulta_enviada p:nth-child(4){
     margin-top:15px;
-    font-weight: 600;
+    font-weight:600;
     font-style:italic;
     color:#f6b233;
 }
@@ -530,20 +545,20 @@ input[type="submit"]:hover{
  /* ESTILOS PANTALLAS HASTA 1.200px */
  
 @media screen and (max-width:1200px){
-    nav a{
+    .navegacion a{
         font-size:1rem;
     }
-    nav li:not(:last-child){
+    .navegacion li:not(:last-child){
         margin-right:20px;
     }
-    ul ul{
+    .navegacion ul ul{
         left:-1rem;
         width:130px;
     }
-    ul ul li{
+    .navegacion ul ul li{
         width:82%;
     }
-    ul ul a{
+    .navegacion ul ul a{
         font-size:0.6rem;
         font-weight:300;
     }
@@ -582,20 +597,20 @@ input[type="submit"]:hover{
     .header_secundario ul li{
         padding:5px;
     }
-    nav a{
+    .navegacion a{
         font-size:0.8rem;
     }
-    nav li:not(:last-child){
+    .navegacion li:not(:last-child){
         margin-right:20px;
     }
-    ul ul{
+    .navegacion ul ul{
         left:-1rem;
         width:130px;
     }
-    ul ul li{
+    .navegacion ul ul li{
         width:82%;
     }
-    ul ul a{
+    .navegacion ul ul a{
         font-size:0.6rem;
         font-weight:300;
     }
@@ -662,7 +677,7 @@ input[type="submit"]:hover{
     .navegacion{
         display:block;
         position:fixed;
-        background-color:rgba(255,255,255,0.8);
+        background-color:rgba(255,255,255,0.9);
         width:calc(100% - 100px);
         height:100vh;
         top:-150vh;
@@ -672,6 +687,9 @@ input[type="submit"]:hover{
     }
     .desplegado{
         top:0vh;
+    }
+    .navegacion ul li:hover ul{
+        display:none;
     }
     .navegacion ul{
         display:flex;
@@ -687,8 +705,8 @@ input[type="submit"]:hover{
     .navegacion li:not(:last-child){
         margin-right:0px;
     }
-    .navegacio li:not(:first-child){
-        margin-top:5px;
+    .navegacion li:not(:first-child){
+        margin-top:10px;
     }
     .navegacion ul ul li{
         display:block;
@@ -702,6 +720,9 @@ input[type="submit"]:hover{
         background-color: #f6b233;
     }
     .navegacion ul li:hover ul{
+        display:none;
+    }
+    .lista_desplegable{
         display:block;
     }
     .cerrar_header_movil{
@@ -721,7 +742,8 @@ input[type="submit"]:hover{
         width:250px;
         border:1px solid rgba(255,255,255,0.8);
         border-radius:20px;
-        background-color:rgba(255,255,255,0.6);
+        background-color:rgba(255,255,255,0.8);
+        box-shadow:0.5px 0.5px 10px #2f272a;
         padding:5px;
         cursor:pointer;
         width:200px;
@@ -754,30 +776,30 @@ input[type="submit"]:hover{
     .contenedor_entorno h2{
         font-size:1rem; 
     }
-    .contenedor_rutas h3, .contenedor_entorno h3{
+    .contenedor_rutas h3,.contenedor_entorno h3{
         display:block;
         font-size:0.5rem;
     }
-    .contenedor_rutas p, .contenedor_entorno p {
+    .contenedor_rutas p,.contenedor_entorno p{
         font-size: 0.3rem;
     }
     .contenedor_entorno p{
         line-height: 0.8rem;
       }
-    .derecha_cabecera_ruta {
+    .derecha_cabecera_ruta{
         width: 160px;
     }
-    .contenedor_rutas p, .contenedor_entorno p {
+    .contenedor_rutas p,.contenedor_entorno p{
         font-size: 0.6rem;
     }
     .derecha_cabecera_ruta{
         width:160px;
     }
-    .contenedor_rutas img, .contenedor_entorno img{
+    .contenedor_rutas img,.contenedor_entorno img{
         width:200px;
         height:200px;
     }
-    .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
+    .bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
         margin:0px;
     }
     .img_rutas{
@@ -786,7 +808,11 @@ input[type="submit"]:hover{
         align-items:center;
     }
     .galeria,.mapas{
-        grid-template-columns: repeat(1,auto);
+        grid-template-columns:repeat(1,auto);
+    }
+    .galeria img:hover,.enlace-mapa:hover{
+        transform:scale(1);
+        box-shadow:none;
     }
     .modal_galeria button{
         font-size:2rem;
@@ -809,10 +835,10 @@ input[type="submit"]:hover{
         left:-26px;
         font-size:1rem;
     }
-    .formulario, .texto_localizador_contacto{
-        width:320px;
+    .formulario,.texto_localizador_contacto{
+        width:calc(100% - 20px);
     }
-    .formulario h2, .texto_localizador_contacto h2{
+    .formulario h2,.texto_localizador_contacto h2{
         font-size:2rem;
     }
     .texto_localizador_contacto p{
@@ -853,6 +879,6 @@ input[type="submit"]:hover{
     }
     .senderista:last-child{
         width:28px;
-        left:-25px;
+        left:36px;
     }
 }

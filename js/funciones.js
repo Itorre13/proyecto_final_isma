@@ -1,4 +1,5 @@
-//funciones abrir-cerrar menú navegacion movil
+
+/* FUNCIONES ABRIR Y CERRAR MENU NAVEGACION MOVIL */
 
 const navegacion = document.querySelector(".navegacion");
 const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil");
@@ -8,6 +9,20 @@ function toggleNavegacion(){
 };
 
 botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));
+
+
+/* FUNCIONES ABRIR Y CERRAR MENÚ DESPLEGABLE NAVEGACION MOVIL */
+
+const navListaDesplegable = document.querySelector(".navegacion ul li ul");
+const ListaDesplegable = document.querySelectorAll(".navegacion ul li"); 
+
+function abrirDesplegable(){
+    navListaDesplegable.classList.toggle("lista_desplegable");
+};
+
+ListaDesplegable.forEach( boton => boton.addEventListener("click", abrirDesplegable));
+
+
 
 
 //funciones movimiento senderistas footer
@@ -20,7 +35,8 @@ senderistas.forEach( hiker => {
 });
 
 
-//funciones ocultar header al hacer scroll hacia abajo(basado en tutorial w3schools)
+/* FUNCIONES OCULTAR HEADER AL HACER SCROLL DOWN Y MOSTRARLO AL HACER SCROLL UP (basado en tutorial w3schools) */
+
 let prevScrollpos = window.pageYOffset;
 const headerSecundario = document.querySelector(".header_secundario");
 
@@ -35,7 +51,8 @@ prevScrollpos = currentScrollPos;
 };
 
 
-//funciones galeria
+/* FUNCIONES MODAL GALERIA */
+
 const enlacesImagen = document.querySelectorAll(".galeria a");
 const modal = document.querySelector(".modal_galeria");
 const imgModal = document.querySelector(".modal_galeria img");
@@ -69,7 +86,7 @@ flechas.forEach((flecha,i) => {
 });
 
 
-//funciones formulario - consulta enviada
+/* FUNCIONES FORMUALARIO-CONSULTA ENVIADA */
 
 const enviarConsulta = document.querySelector('form input[type="submit"]');
 const consultaEnviada = document.querySelector(".modal_consulta");
@@ -79,7 +96,7 @@ const cerrar = document.querySelector(".boton_cerrar");
 enviarConsulta.addEventListener("click", evento => {
     evento.preventDefault();
     consultaEnviada.classList.add("visible");
-    formulario.reset(); // resetea todo el formulario y vacía los placeholder
+    formulario.reset(); // resetea todo el formulario y vacía los placeholder (función aplicada de tutorial w3schools)
 });
 
 cerrar.addEventListener("click", () => {
