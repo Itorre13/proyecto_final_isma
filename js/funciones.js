@@ -1,3 +1,15 @@
+//funciones abrir-cerrar menú navegacion movil
+
+const navegacion = document.querySelector(".navegacion");
+const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil");
+
+function toggleNavegacion(){
+    navegacion.classList.toggle("desplegado");
+};
+
+botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));
+
+
 //funciones movimiento senderistas footer
 const senderistas = document.querySelectorAll(".senderista");
 
@@ -73,14 +85,3 @@ enviarConsulta.addEventListener("click", evento => {
 cerrar.addEventListener("click", () => {
     consultaEnviada.classList.remove("visible");
 });
-
-//funciones abrir-cerrar navegador movil
-
-const navegacion = document.getElementById("header_principal_movil");
-var botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil");
-
-function toggleNavegacion(){
-    navegacion.setAttribute("id","header_principal_movil desplegado");
-}
-
-botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));

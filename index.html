@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7e9d2c7fad.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-    <script defer src="js/funciones.js"></script>
+    <link rel="stylesheet" href="css/estilos.css"><!-- enlace con archivo estilos.css -->
+    <script defer src="js/funciones.js"></script><!-- conexión con archivo funciones.js -->
 </head>
 <body>
-    <header class= "header_principal"><!--comienzo cabecera principal-->
+    <header class= "header_principal"><!-- comienzo cabecera principal -->
         <h1><a href="#"><img class="logo_inicio" src="img/logo_sangusin_rutas_senderismo_.svg" alt=""></a></h1><!--enlace con logo a página inicio-->
         <button class="abrir_header_movil"><i class="fa-solid fa-bars"></i></button>
-        <nav id="header_principal_movil"><!--comienzo menú barra navegador con id para versión movil-->
+        <nav class="navegacion"><!-- comienzo menú navegación -->
             <button class="cerrar_header_movil">x</button>
-            <ul>
+            <ul><!-- comienzo lista desordenada menú navegación -->
                 <li><a href="rutas.html"><i class="fa-solid fa-location-dot"></i><span>rutas</span></a>
-                    <ul><!--comienzo menú desplegable-->
+                    <ul><!--comienzo menú desplegable -->
                         <li><a href="rutas.html#1"><i class="fa-solid fa-person-hiking"></i> Ruta 1<br>Camino Real<br>-Puente Olario</a></li>
                         <li><a href="rutas.html#2"><i class="fa-solid fa-person-hiking"></i> Ruta 2<br>Barregana<br>-La Puebla</a></li>
                         <li><a href="rutas.html#3"><i class="fa-solid fa-person-hiking"></i> Ruta 3<br>Huerto del Cura<br>-Nava de Béjar</a></li>
@@ -38,32 +38,32 @@
                 <li><a href="galeria.html"><i class="fa-solid fa-location-dot"></i><span>galeria</span></a></li>
                 <li><a href="mapas.html"><i class="fa-solid fa-location-dot"></i><span>mapas</span></a></li>
                 <li><a href="contacto.html"><i class="fa-solid fa-location-dot"></i><span>contacto</span></a>
-                    <ul>
+                    <ul><!--comienzo menú desplegable-->
                         <li><a href="contacto.html#1">· Formulario contacto</a></li>
                         <li><a href="contacto.html#2">· Dirección</a></li>
-                    </ul>
+                    </ul><!--final menú desplegable--> 
                 </li>
-            </ul>
-        </nav><!--final menú barra navegador-->
-    </header><!--final cabecera principal-->
-    <section class="contenedor pg_inicio"><!--comienzo sección -->
-        <h2>El camino va siempre,<br>siempre hacia adelante</h2>
-    </section>
-    <footer>
+            </ul><!-- comienzo lista desordenada menú navegación -->
+        </nav><!-- final menú barra navegador -->
+    </header><!-- final cabecera principal -->
+    <section class="contenedor pg_inicio"><!-- comienzo sección página inicio -->
+        <h2>El camino va siempre,<br>siempre hacia adelante</h2><!-- texto pantalla inicio -->
+    </section><!-- final sección página inicio -->
+    <footer><!-- comienzo pie de página -->
         <div class="redes_sociales">
             <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-        <a href="#" class="texto_footer">
+        <a href="#" class="texto_footer"><!-- comienzo enlace texto pie de página -->
             <p>sangusin</p>
             <p>rutas-senderismo</p>
-        </a>
-        <form class="caja_busqueda">
+        </a><!-- final enlace texto pie de página -->
+        <form class="caja_busqueda"><!-- comienzo barra búsqueda -->
             <input type="text" placeholder="buscar">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-    </footer>
+        </form><!-- final barra búsqueda -->
+    </footer><!-- final pie de página-->
     <div class="contenedor_senderistas"><!-- comienzo contenedor animación senderistas -->
         <img class="senderista" src="img/hiker_1.svg" alt="senderista"><!-- senderistas_1 -->
         <img class="senderista" src="img/hiker_2.svg" alt="senderista"><!-- senderista_2-->
