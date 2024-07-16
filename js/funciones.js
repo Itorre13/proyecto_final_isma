@@ -1,54 +1,69 @@
 
+
+/* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
+
+const submenu = document.querySelectorAll(".submenu");
+const botonesTriangulo = document.querySelectorAll(".fa-square-caret-left");
+navListaDesplegable = []
+
+if(submenu){
+    botonesTriangulo.forEach((boton,i) => {
+        boton.addEventListener("click", evento => {
+            evento.preventDefault();
+            submenu[i].classList.toggle("visible_submenu");
+            botonesTriangulo[i].classList.toggle("rotate_-90deg");
+        });
+    });
+}
+
+
+
 /* FUNCIONES ABRIR Y CERRAR MENU NAVEGACION MOVIL */
 
-const navegacion = document.querySelector(".navegacion");
-const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil");
+const navegacion = document.querySelector(".navegacion"); // constante para seleccionar el elemento con la clase .navegacion
+const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil"); // constante para seleccionar los elementos con las clases .abrir_header_movil y .cerrar_header_movil
 
-function toggleNavegacion(){
-    navegacion.classList.toggle("desplegado");
-};
+if(navegacion){
+    function toggleNavegacion(){ // función para añadir y quitar la clase .desplegado a navegacion
+        navegacion.classList.toggle("desplegado");
+    };
+}
 
-botones.forEach( boton => boton.addEventListener("click", toggleNavegacion));
+if(botones){
+    botones.forEach( boton => boton.addEventListener("click", toggleNavegacion)); // por cada botón al hacer click invocar la función para quitar o poner la clase .desplegado
+}
 
+/* FUNCIONES ANIMACION SENDERISTAS FOOTER */
 
-/* FUNCIONES ABRIR Y CERRAR MENÚ DESPLEGABLE NAVEGACION MOVIL */
-
-const navListaDesplegable = document.querySelector(".navegacion ul li ul");
-const ListaDesplegable = document.querySelectorAll(".navegacion ul li"); 
-
-function abrirDesplegable(){
-    navListaDesplegable.classList.toggle("lista_desplegable");
-};
-
-ListaDesplegable.forEach( boton => boton.addEventListener("click", abrirDesplegable));
-
-
-
-
-//funciones movimiento senderistas footer
 const senderistas = document.querySelectorAll(".senderista");
 
-senderistas.forEach( hiker => {
-    hiker.addEventListener("click", () => {
-        hiker.classList.toggle("movimiento");
+if(senderistas){
+    senderistas.forEach( hiker => {
+        hiker.addEventListener("click", () => {
+            hiker.classList.toggle("movimiento");
+        });
     });
-});
+}
+
 
 
 /* FUNCIONES OCULTAR HEADER AL HACER SCROLL DOWN Y MOSTRARLO AL HACER SCROLL UP (basado en tutorial w3schools) */
 
-let prevScrollpos = window.pageYOffset;
-const headerSecundario = document.querySelector(".header_secundario");
+let prevScrollpos = window.scrollY;
+const headerSecundario = document.querySelector(".header_secundario");  // constante para seleccionar el elemento con la clase .header_secundario
 
-window.onscroll = function() {
- let currentScrollPos = window.pageYOffset;
- if (prevScrollpos > currentScrollPos) {
-  headerSecundario.style.top = "0px";
-} else {
-  headerSecundario.style.top = "-180px";
- }
-prevScrollpos = currentScrollPos;
-};
+if(headerSecundario){
+    window.onscroll = function() {
+    let currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+    headerSecundario.style.top = "0px";
+    } else {
+    headerSecundario.style.top = "-180px";
+    }
+    prevScrollpos = currentScrollPos;
+    };
+}
+
 
 
 /* FUNCIONES MODAL GALERIA */
@@ -60,30 +75,36 @@ const flechas = document.querySelectorAll(".modal_galeria button");
 const cerrarModal = document.querySelector(".boton_cerrar");
 let indiceImg = 0;
 
-enlacesImagen.forEach((enlaceImg,i) => {
-    enlaceImg.addEventListener("click", evento => {
-        evento.preventDefault();
-        indiceImg = i;
-        imgModal.setAttribute("src",enlaceImg.getAttribute("href"));
-        modal.classList.add("visible");
+if(enlacesImagen){
+    enlacesImagen.forEach((enlaceImg,i) => {
+        enlaceImg.addEventListener("click", evento => {
+            evento.preventDefault();
+            indiceImg = i;
+            imgModal.setAttribute("src",enlaceImg.getAttribute("href"));
+            modal.classList.add("visible");
+        });
     });
-}); 
+}
 
-cerrarModal.addEventListener("click", () => {
-    modal.classList.remove("visible");
-});
-
-flechas.forEach((flecha,i) => {
-    flecha.addEventListener("click", (evento) => {
-        evento.stopPropagation();
-        if(i == 0){
-            indiceImg = indiceImg > 0 ? indiceImg - 1 : enlacesImagen.length - 1;
-        }else{
-            indiceImg = indiceImg < enlacesImagen.length - 1 ? indiceImg + 1: 0;
-        }
-        imgModal.setAttribute("src",enlacesImagen[indiceImg].getAttribute("href"));
+if(cerrarModal){
+    cerrarModal.addEventListener("click", () => {
+        modal.classList.remove("visible");
     });
-});
+}
+
+if(flechas){
+    flechas.forEach((flecha,i) => {
+        flecha.addEventListener("click", (evento) => {
+            evento.stopPropagation();
+            if(i == 0){
+                indiceImg = indiceImg > 0 ? indiceImg - 1 : enlacesImagen.length - 1;
+            }else{
+                indiceImg = indiceImg < enlacesImagen.length - 1 ? indiceImg + 1: 0;
+            }
+            imgModal.setAttribute("src",enlacesImagen[indiceImg].getAttribute("href"));
+        });
+    });
+}
 
 
 /* FUNCIONES FORMUALARIO-CONSULTA ENVIADA */
@@ -93,12 +114,16 @@ const consultaEnviada = document.querySelector(".modal_consulta");
 const formulario = document.querySelector("form");
 const cerrar = document.querySelector(".boton_cerrar");
 
-enviarConsulta.addEventListener("click", evento => {
-    evento.preventDefault();
-    consultaEnviada.classList.add("visible");
-    formulario.reset(); // resetea todo el formulario y vacía los placeholder (función aplicada de tutorial w3schools)
-});
+if(enviarConsulta){
+    enviarConsulta.addEventListener("click", evento => {
+        evento.preventDefault();
+        consultaEnviada.classList.add("visible");
+        formulario.reset(); // resetea todo el formulario y vacía los placeholder (función aplicada de tutorial w3schools)
+    });
+}
 
-cerrar.addEventListener("click", () => {
-    consultaEnviada.classList.remove("visible");
-});
+if(cerrar){
+    cerrar.addEventListener("click", () => {
+        consultaEnviada.classList.remove("visible");
+    });
+}

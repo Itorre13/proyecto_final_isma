@@ -55,10 +55,16 @@ button, input{
     display:flex;
 }
 .navegacion a{
+    display:flex;
+    align-items:center;
+    width:100%;
     text-decoration:none;
     color:black;
     font-size:1.3rem;
     font-weight:500;
+}
+.navegacion li:not(:last-child){
+    margin-right:1rem;
 }
 .navegacion li{
     display:block;
@@ -71,54 +77,73 @@ button, input{
     transition:transform 0.7s;
 }
 .navegacion li:hover{
-    transform:scale(1.3);
+    transform:scale(1.2);
 }
-.navegacion li:not(:last-child){
-    margin-right:40px;
+.navegacion ul li ul li:hover{
+    transform:scale(1.2);
 }
 .navegacion .fa-location-dot{
+    color:#f6b233;
+}
+.navegacion .fa-square-caret-left{
+    font-size: 0.8rem;
     color:rgba(207,85,51,0.8);
+}
+.navegacion .fa-location-dot{
     margin-right:0.3rem;
 }
-.navegacion ul ul{
+.navegacion .fa-square-caret-left{
+    margin-left:1rem;
+}
+.navegacion ul li{
+    position:relative;
+}
+.navegacion .submenu{
     display:none;
     position:absolute;
-    top:100%;
-    left:-5rem;
-    width:250px;
+    top:45px;
+    left:0;
+    width:100%;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color:rgba(255,255,255,0.6);
+    background-color: rgba(246,178,51,0.5);
     padding:5px;
     cursor:pointer;
+    z-index:2;
 }
-.navegacion ul ul li{
-    display:none;
-    width:91%;
+.submenu.visible_submenu{
+    display:block;
+    z-index:3;
+}
+.rotate_-90deg{
+    transform:rotate(-90deg);
+}
+.submenu li{
+    width:calc(100% - 20px);
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
 }
-.navegacion ul ul li:not(:first-child){
+.submenu li a{
+    flex-direction:column;
+}
+.submenu li:not(:first-child){
     margin-top:5px;
 }
-.navegacion ul ul a{
+.submenu a{
     text-align:center;
     line-height:120%;
     color:black;
-    font-size:0.7rem;
+    font-size:0.6rem;
     font-weight:500;
-}
-.navegacion ul li:hover ul{
-    display:block;
 }
 #seleccionado{
     background-color:#f6b233;
 }
-#seleccionado i,#seleccionado span{
+#seleccionado .fa-location-dot,#seleccionado span{
     color:white;
 }
-#seleccionado .fa-person-hiking{
+#seleccionado .fa-person-hiking .fa-square-caret-left{
     color:#cf5533;
 }
 
@@ -546,21 +571,20 @@ input[type="submit"]:hover{
  
 @media screen and (max-width:1200px){
     .navegacion a{
-        font-size:1rem;
+        font-size:0.7rem;
     }
     .navegacion li:not(:last-child){
-        margin-right:20px;
+        margin-right:10px;
     }
-    .navegacion ul ul{
-        left:-1rem;
-        width:130px;
+    .navegacion .submenu{
+        top:35px;
     }
-    .navegacion ul ul li{
-        width:82%;
+    .submenu li{
+        width:calc(100% - 20px);
     }
-    .navegacion ul ul a{
-        font-size:0.6rem;
-        font-weight:300;
+    .submenu a{
+        font-size:0.4rem;
+        font-weight:200;
     }
     .contenedor_rutas, .contenedor_entorno{
         margin:50px auto 50px;
@@ -598,21 +622,17 @@ input[type="submit"]:hover{
         padding:5px;
     }
     .navegacion a{
-        font-size:0.8rem;
+        font-size:0.7rem;
     }
     .navegacion li:not(:last-child){
-        margin-right:20px;
+        margin-right:10px;
     }
-    .navegacion ul ul{
-        left:-1rem;
-        width:130px;
+    .submenu li{
+        width:calc(100% - 20px);
     }
-    .navegacion ul ul li{
-        width:82%;
-    }
-    .navegacion ul ul a{
-        font-size:0.6rem;
-        font-weight:300;
+    .submenu a{
+        font-size:0.4rem;
+        font-weight:200;
     }
     .contenedor_rutas,.contenedor_entorno{
         margin:50px auto 50px;
@@ -678,7 +698,7 @@ input[type="submit"]:hover{
         display:block;
         position:fixed;
         background-color:rgba(255,255,255,0.9);
-        width:calc(100% - 100px);
+        width:calc(100% - 80px);
         height:100vh;
         top:-150vh;
         left:0;
@@ -688,32 +708,43 @@ input[type="submit"]:hover{
     .desplegado{
         top:0vh;
     }
-    .navegacion ul li:hover ul{
-        display:none;
-    }
     .navegacion ul{
-        display:flex;
         flex-direction:column;
     }
-    .navegacion ul ul{
-        display:none;
-        position:relative;
-        top:0px;
-        left:0px;
-        width:calc(100% - 10px);
-    }
-    .navegacion li:not(:last-child){
-        margin-right:0px;
-    }
-    .navegacion li:not(:first-child){
-        margin-top:10px;
-    }
-    .navegacion ul ul li{
-        display:block;
-        width:88%;
+    .navegacion ul li{
         display:flex;
         justify-content:center;
         align-items:center;
+        height:5vh;
+    }
+    .navegacion .submenu {
+        top:46px;
+        left:5px;
+        width:100%;
+    }
+    .navegacion .fa-square-caret-left{
+        font-size:1.5rem;
+    }
+    .navegacion li:first-child .fa-square-caret-left{
+        margin-left:6rem;
+    }
+    .navegacion li:nth-child(2) .fa-square-caret-left{
+        margin-left:4.8rem;
+    }
+    .navegacion li:last-child .fa-square-caret-left{
+        margin-left:4.5rem;
+    }
+    .navegacion ul li a{
+        font-size:1rem;
+    }
+    .navegacion ul ul li a{
+        font-size:0.5rem;
+    }
+    .navegacion li:not(:first-child){
+        margin-top:0.4rem;
+    }
+    .navegacion li:not(:last-child) {
+        margin-right:0;
     }
     .navegacion li:hover{
         transform:scale(1);
@@ -722,20 +753,16 @@ input[type="submit"]:hover{
     .navegacion ul li:hover ul{
         display:none;
     }
-    .lista_desplegable{
-        display:block;
-    }
     .cerrar_header_movil{
         display:block;
         border:none;
-        border-radius:20px;
         color:#cf5533;
         background-color:transparent;
         cursor:pointer;
         position:absolute;
-        top:20px;
-        left:20px;
-        font-size:2rem;
+        top:15px;
+        left:15px;
+        font-size:1.5rem;
     }
     .abrir_header_movil{
         display:block;
@@ -756,13 +783,13 @@ input[type="submit"]:hover{
         width:100px;
     }
     .pg_inicio{
-        height:100vh;
+        height:90vh;
         flex-direction:column;
         justify-content:flex-end;
     }
     .pg_inicio h2{
-        font-size:1.5rem;
-        margin-bottom:170px;
+        font-size:1.3rem;
+        margin-bottom:100px;
         text-align:center;
     }
     .contenedor_rutas,.contenedor_entorno{
@@ -771,29 +798,38 @@ input[type="submit"]:hover{
     }
     .contenedor_rutas h2{
         display:block;
-        font-size:0.6rem;
+        font-size:0.8rem;
     }
     .contenedor_entorno h2{
         font-size:1rem; 
     }
     .contenedor_rutas h3,.contenedor_entorno h3{
         display:block;
-        font-size:0.5rem;
+        font-size:0.8rem;
     }
     .contenedor_rutas p,.contenedor_entorno p{
-        font-size: 0.3rem;
+        font-size:0.6rem;
     }
     .contenedor_entorno p{
         line-height: 0.8rem;
-      }
+    }
+    .cabecera_ruta{
+        flex-direction:column;
+        align-items:center;
+    }
+    .izquierda_cabecera_ruta{
+        display:flex;
+        align-items:center;
+    }
     .derecha_cabecera_ruta{
         width: 160px;
     }
     .contenedor_rutas p,.contenedor_entorno p{
-        font-size: 0.6rem;
+        font-size:0.9rem;
     }
     .derecha_cabecera_ruta{
-        width:160px;
+        width:calc(100% - 50px);
+        margin-bottom:5px;
     }
     .contenedor_rutas img,.contenedor_entorno img{
         width:200px;
@@ -848,33 +884,28 @@ input[type="submit"]:hover{
         width:320px;
     }
     footer{
-        height:15vh;
+        width:100%;
+        height:10vh;
         flex-direction:column;
-        justify-content: space-around;
     }
     footer .fa-brands{
         margin-right:10px;
     }
-    .redes_sociales, .texto_footer{
+    .redes_sociales{
+        font-size:1.2rem;
+    }
+    .texto_footer{
         font-size:0.8rem;
     }
-    .redes_sociales, .texto_footer, .caja_busqueda{
-        margin-top:5px;
+    .redes_sociales,.texto_footer{
+        margin:5px;
     }
     .caja_busqueda{
-        width:120px;
-        margin-left:0px;
-    }
-    .caja_busqueda input{
-        width:76%;
-        margin-left:3px;
-    }
-    footer button .fa-solid{
-        font-size:0.7rem;
+        display:none;
     }
     .senderista{
         width:25px;
-        bottom:16.7vh;
+        bottom:12.7vh;
         left:5px;
     }
     .senderista:last-child{
