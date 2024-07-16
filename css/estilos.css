@@ -12,7 +12,7 @@ body{
     background-image:linear-gradient(to top, #fff3e1, white);
     text-align:justify;
 }
-button, input{
+button,input{
     -webkit-appearance:none;
     appearance:none;
 }
@@ -106,10 +106,10 @@ button, input{
     width:100%;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color: rgba(246,178,51,0.5);
+    background-color: rgba(246,178,51,0.6);
     padding:5px;
     cursor:pointer;
-    z-index:1;
+    z-index:2;
 }
 .submenu.visible_submenu{
     display:block;
@@ -701,12 +701,6 @@ input[type="submit"]:hover{
  
 
 @media screen and (max-width:601px){
-    .navegacion li:hover{
-        transform:scale(1);
-    }
-    .navegacion ul li ul li:hover{
-        transform:scale(1);
-    }
     .header_principal{
         height:230px;
         padding:25px;
@@ -716,13 +710,13 @@ input[type="submit"]:hover{
         height:180px;
         padding:10px;
     }
-    .header_principal .navegacion .submenu {
-        top: 3.3rem;
-        left: 0.4rem;
-      }
+    .header_secundario .navegacion .submenu {
+        top: 2.8rem;
+        left: -0.5rem;
+    }
     .navegacion{
         display:block;
-        position:absolute;
+        position:fixed;
         background-color:rgba(255,255,255,0.95);
         width:calc(100% - 80px);
         height:100vh;
@@ -731,8 +725,19 @@ input[type="submit"]:hover{
         padding:50px;
         transition:top 0.8s;
     }
-    .desplegado{
-        top:0vh;
+    .navegacion li:hover{
+        transform:none;
+    }
+    .navegacion ul li ul li:hover{
+        transform:scale(1);
+    }
+    .header_principal .navegacion .submenu {
+        top: 3.3rem;
+        left: 0.4rem;
+    }
+    .navegacion .submenu li{
+        width:calc(100% - 38px);
+        padding:18px;
     }
     .navegacion ul{
         flex-direction:column;
@@ -742,25 +747,6 @@ input[type="submit"]:hover{
         justify-content:center;
         align-items:center;
         height:5vh;
-    }
-    .navegacion .submenu{
-        top:40px;
-        left:5px;
-        width:100%;
-        z-index:4;
-        background-color: rgba(246,178,51,0.8);
-    }
-    .navegacion .fa-square-caret-left{
-        font-size:1.5rem;
-    }
-    .navegacion li:first-child .fa-square-caret-left{
-        margin-left:7.2rem;
-    }
-    .navegacion li:nth-child(2) .fa-square-caret-left{
-        margin-left:5.8rem;
-    }
-    .navegacion li:last-child .fa-square-caret-left{
-        margin-left:5.3rem;
     }
     .navegacion ul li a{
         font-size:1.2rem;
@@ -774,6 +760,21 @@ input[type="submit"]:hover{
     }
     .navegacion li:not(:last-child) {
         margin-right:0;
+    }
+    .navegacion .fa-square-caret-left{
+        font-size:1.5rem;
+    }
+    .navegacion li:first-child .fa-square-caret-left{
+        margin-left:7.2rem;
+    }
+    .navegacion li:nth-child(2) .fa-square-caret-left{
+        margin-left:5.8rem;
+    }
+    .navegacion li:last-child .fa-square-caret-left{
+        margin-left:5.3rem;
+    }
+    .desplegado{
+        top:0vh;
     }
     .cerrar_header_movil{
         display:block;
@@ -871,13 +872,10 @@ input[type="submit"]:hover{
     .galeria img:hover,.enlace-mapa:hover{
         transform:scale(1);
         box-shadow:none;
+        cursor:auto;
     }
-    .modal_galeria button{
-        font-size:2rem;
-        padding:5px;
-    }
-    .modal_galeria button span{
-        margin:5px;
+    .modal_galeria{
+        display:none;
     }
     .contenedor-img{
         width:250px;
@@ -904,6 +902,27 @@ input[type="submit"]:hover{
     }
     .texto_localizador_contacto iframe{
         width:320px;
+    }
+    .consulta_enviada{
+        width:60%;
+    }
+    .consulta_enviada h2{
+        font-size:0.8rem;
+    }
+    .consulta_enviada p:nth-child(3){
+        font-size:0.7rem;
+        padding:10px 0px;
+    }
+    .consulta_enviada p:nth-child(4){
+        font-size:0.6rem;
+        margin-top:10px;
+    }
+    .boton_cerrar{
+        top:1px;
+        left:1px;
+        width:20px;
+        height:20px;
+        font-size:1rem;
     }
     footer{
         width:100%;

@@ -1,29 +1,11 @@
 
 
-/* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
-
-const submenu = document.querySelectorAll(".submenu");
-const botonesTriangulo = document.querySelectorAll(".fa-square-caret-left");
-navListaDesplegable = []
-
-if(submenu){
-    botonesTriangulo.forEach((boton,i) => {
-        boton.addEventListener("click", evento => {
-            evento.preventDefault();
-            submenu[i].classList.toggle("visible_submenu");
-            botonesTriangulo[i].classList.toggle("rotate_-90deg");
-        });
-    });
-}
-
-
-
 /* FUNCIONES ABRIR Y CERRAR MENU NAVEGACION MOVIL */
 
 const navegacion = document.querySelector(".navegacion"); // constante para seleccionar el elemento con la clase .navegacion
 const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil"); // constante para seleccionar los elementos con las clases .abrir_header_movil y .cerrar_header_movil
 
-if(navegacion){
+if(navegacion){ // el if evita el error y así sigue leyendo el código js si no encuentra esa constante en ese html. De esta manera sólo tendremos un archivo js conectado con todos los html.
     function toggleNavegacion(){ // función para añadir y quitar la clase .desplegado a navegacion
         navegacion.classList.toggle("desplegado");
     };
@@ -45,6 +27,23 @@ if(senderistas){
     });
 }
 
+
+
+/* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
+
+const submenu = document.querySelectorAll(".submenu");
+const botonesTriangulo = document.querySelectorAll(".fa-square-caret-left");
+navListaDesplegable = []
+
+if(submenu){
+    botonesTriangulo.forEach((boton,i) => {
+        boton.addEventListener("click", evento => {
+            evento.preventDefault();
+            submenu[i].classList.toggle("visible_submenu");
+            botonesTriangulo[i].classList.toggle("rotate_-90deg");
+        });
+    });
+}
 
 
 /* FUNCIONES OCULTAR HEADER AL HACER SCROLL DOWN Y MOSTRARLO AL HACER SCROLL UP (basado en tutorial w3schools) */
