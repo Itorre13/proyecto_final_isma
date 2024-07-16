@@ -85,15 +85,16 @@ button,input{
 .navegacion .fa-location-dot{
     color:#f6b233;
 }
-.navegacion .fa-square-caret-left{
+.navegacion .fa-rotate-90{
+    margin-left:1rem;
     font-size: 0.8rem;
-    color:rgba(207,85,51,0.8);
+    color:#2f272a;
+}
+.rotate{
+    transform:rotate(-360deg);
 }
 .navegacion .fa-location-dot{
     margin-right:0.3rem;
-}
-.navegacion .fa-square-caret-left{
-    margin-left:1rem;
 }
 .navegacion ul li{
     position:relative;
@@ -106,16 +107,13 @@ button,input{
     width:100%;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color: rgba(246,178,51,0.6);
+    background-color: rgba(47,39,42,0.4);
     padding:5px;
     cursor:pointer;
     z-index:2;
 }
 .submenu.visible_submenu{
     display:block;
-}
-.rotate_-90deg{
-    transform:rotate(-90deg);
 }
 .submenu li{
     width:calc(100% - 20px);
@@ -127,7 +125,7 @@ button,input{
     flex-direction:column;
 }
 .submenu li:not(:first-child){
-    margin-top:5px;
+    margin-top:2px;
 }
 .submenu a{
     text-align:center;
@@ -137,12 +135,12 @@ button,input{
     font-weight:500;
 }
 #seleccionado{
-    background-color:#f6b233;
+    background-color:rgba(246,178,51,0.8);
 }
-#seleccionado .fa-location-dot,#seleccionado span{
+#seleccionado .fa-location-dot,#seleccionado span:nth-child(2){
     color:white;
 }
-#seleccionado .fa-person-hiking .fa-square-caret-left{
+#seleccionado .fa-person-hiking .fa-rotate-90{
     color:#cf5533;
 }
 
@@ -572,9 +570,6 @@ input[type="submit"]:hover{
     .navegacion a{
         font-size:0.7rem;
     }
-    .navegacion li:not(:last-child){
-        margin-right:10px;
-    }
     .header_principal .navegacion .submenu{
         top:2.1rem;
         left:-0.5rem;
@@ -631,7 +626,7 @@ input[type="submit"]:hover{
     .navegacion li:not(:last-child){
         margin-right:10px;
     }
-    .navegacion ul ul li:not(:last-child) {
+    .navegacion ul ul li:not(:last-child){
         margin-right:0px;
       }
     .navegacion .submenu li{
@@ -742,6 +737,9 @@ input[type="submit"]:hover{
     .navegacion ul{
         flex-direction:column;
     }
+    .navegacion .submenu li br:nth-child(4){
+        display:none;
+    }
     .navegacion ul li{
         display:flex;
         justify-content:center;
@@ -761,16 +759,16 @@ input[type="submit"]:hover{
     .navegacion li:not(:last-child) {
         margin-right:0;
     }
-    .navegacion .fa-square-caret-left{
+    .navegacion .fa-rotate-90{
         font-size:1.5rem;
     }
-    .navegacion li:first-child .fa-square-caret-left{
+    .navegacion li:first-child .fa-rotate-90{
         margin-left:7.2rem;
     }
-    .navegacion li:nth-child(2) .fa-square-caret-left{
+    .navegacion li:nth-child(2) .fa-rotate-90{
         margin-left:5.8rem;
     }
-    .navegacion li:last-child .fa-square-caret-left{
+    .navegacion li:last-child .fa-rotate-90{
         margin-left:5.3rem;
     }
     .desplegado{

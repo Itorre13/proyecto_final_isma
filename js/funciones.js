@@ -32,7 +32,7 @@ if(senderistas){
 /* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
 
 const submenu = document.querySelectorAll(".submenu");
-const botonesTriangulo = document.querySelectorAll(".fa-square-caret-left");
+const botonesTriangulo = document.querySelectorAll(".fa-circle-chevron-down");
 navListaDesplegable = []
 
 if(submenu){
@@ -40,7 +40,7 @@ if(submenu){
         boton.addEventListener("click", evento => {
             evento.preventDefault();
             submenu[i].classList.toggle("visible_submenu");
-            botonesTriangulo[i].classList.toggle("rotate_-90deg");
+            botonesTriangulo[i].classList.toggle("rotate");
         });
     });
 }
