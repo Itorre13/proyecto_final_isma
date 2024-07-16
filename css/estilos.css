@@ -109,11 +109,10 @@ button, input{
     background-color: rgba(246,178,51,0.5);
     padding:5px;
     cursor:pointer;
-    z-index:2;
+    z-index:1;
 }
 .submenu.visible_submenu{
     display:block;
-    z-index:3;
 }
 .rotate_-90deg{
     transform:rotate(-90deg);
@@ -576,9 +575,13 @@ input[type="submit"]:hover{
     .navegacion li:not(:last-child){
         margin-right:10px;
     }
-    .navegacion .submenu{
-        top:34px;
-        left:-9px;
+    .header_principal .navegacion .submenu{
+        top:2.1rem;
+        left:-0.5rem;
+    }
+    .header_secundario .navegacion .submenu{
+        top:1.5rem;
+        left:-0.5rem;
     }
     .submenu li{
         width:calc(100% - 20px);
@@ -632,11 +635,16 @@ input[type="submit"]:hover{
         margin-right:0px;
       }
     .navegacion .submenu li{
-        width:calc(100% - 11px);
+        width:calc(100% - 22px);
+        padding:10px;
     }
-    .navegacion .submenu{
-        top:25px;
-        left:-9px;
+    .header_principal .navegacion .submenu{
+        top:2.1rem;
+        left:-0.5rem;
+    }
+    .header_secundario .navegacion .submenu{
+        top:1.5rem;
+        left:-0.5rem;
     }
     .submenu a{
         font-size:0.4rem;
@@ -708,10 +716,14 @@ input[type="submit"]:hover{
         height:180px;
         padding:10px;
     }
+    .header_principal .navegacion .submenu {
+        top: 3.3rem;
+        left: 0.4rem;
+      }
     .navegacion{
         display:block;
-        position:fixed;
-        background-color:rgba(255,255,255,0.9);
+        position:absolute;
+        background-color:rgba(255,255,255,0.95);
         width:calc(100% - 80px);
         height:100vh;
         top:-150vh;
@@ -735,26 +747,27 @@ input[type="submit"]:hover{
         top:40px;
         left:5px;
         width:100%;
-        z-index:100;
+        z-index:4;
         background-color: rgba(246,178,51,0.8);
     }
     .navegacion .fa-square-caret-left{
         font-size:1.5rem;
     }
     .navegacion li:first-child .fa-square-caret-left{
-        margin-left:7rem;
+        margin-left:7.2rem;
     }
     .navegacion li:nth-child(2) .fa-square-caret-left{
         margin-left:5.8rem;
     }
     .navegacion li:last-child .fa-square-caret-left{
-        margin-left:5.5rem;
+        margin-left:5.3rem;
     }
     .navegacion ul li a{
-        font-size:1rem;
+        font-size:1.2rem;
     }
     .navegacion ul ul li a{
-        font-size:0.5rem;
+        font-size:0.8rem;
+        padding:10px;
     }
     .navegacion li:not(:first-child){
         margin-top:0.4rem;
