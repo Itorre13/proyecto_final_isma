@@ -102,7 +102,7 @@ button, input{
     display:none;
     position:absolute;
     top:45px;
-    left:0;
+    left:-9px;
     width:100%;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
@@ -577,7 +577,8 @@ input[type="submit"]:hover{
         margin-right:10px;
     }
     .navegacion .submenu{
-        top:35px;
+        top:34px;
+        left:-9px;
     }
     .submenu li{
         width:calc(100% - 20px);
@@ -627,8 +628,15 @@ input[type="submit"]:hover{
     .navegacion li:not(:last-child){
         margin-right:10px;
     }
-    .submenu li{
-        width:calc(100% - 20px);
+    .navegacion ul ul li:not(:last-child) {
+        margin-right:0px;
+      }
+    .navegacion .submenu li{
+        width:calc(100% - 11px);
+    }
+    .navegacion .submenu{
+        top:25px;
+        left:-9px;
     }
     .submenu a{
         font-size:0.4rem;
@@ -718,9 +726,11 @@ input[type="submit"]:hover{
         height:5vh;
     }
     .navegacion .submenu {
-        top:46px;
+        top:40px;
         left:5px;
         width:100%;
+        z-index:100;
+        background-color: rgba(246,178,51,0.8);
     }
     .navegacion .fa-square-caret-left{
         font-size:1.5rem;
@@ -747,8 +757,7 @@ input[type="submit"]:hover{
         margin-right:0;
     }
     .navegacion li:hover{
-        transform:scale(1);
-        background-color: #f6b233;
+        display:none;
     }
     .navegacion ul li:hover ul{
         display:none;
