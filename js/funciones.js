@@ -5,22 +5,22 @@
 const navegacion = document.querySelector(".navegacion"); // constante para seleccionar el elemento con la clase .navegacion
 const botones = document.querySelectorAll(".abrir_header_movil,.cerrar_header_movil"); // constante para seleccionar los elementos con las clases .abrir_header_movil y .cerrar_header_movil
 
-if(navegacion){ // el if evita el error y así sigue leyendo el código js si no encuentra esa constante en ese html. De esta manera sólo tendremos un archivo js conectado con todos los html.
-    function toggleNavegacion(){ // función para añadir y quitar la clase .desplegado a navegacion
+if(navegacion){ // el if evitará el error y así seguirá leyendo el código js si no encuentra esa constante en ese html. De esta manera sólo tendremos un archivo js conectado con todos los html.
+    function toggleNavegacion(){ // función que añadirá y quitará la clase .desplegado a navegacion
         navegacion.classList.toggle("desplegado");
     };
 }
 
 if(botones){
-    botones.forEach( boton => boton.addEventListener("click", toggleNavegacion)); // por cada botón al hacer click invocar la función para quitar o poner la clase .desplegado
+    botones.forEach( boton => boton.addEventListener("click", toggleNavegacion)); // por cada botón al hacer click invocará la función para quitar o poner la clase .desplegado
 }
 
 /* FUNCIONES ANIMACION SENDERISTAS FOOTER */
 
-const senderistas = document.querySelectorAll(".senderista");
+const senderistas = document.querySelectorAll(".senderista"); // constante para seleccionar los elementos con la clase .senderista
 
 if(senderistas){
-    senderistas.forEach( hiker => {
+    senderistas.forEach( hiker => { // por cada senderista, hiker, al hacer click se le añadadirá o quitará la clase .movimiento
         hiker.addEventListener("click", () => {
             hiker.classList.toggle("movimiento");
         });
@@ -31,16 +31,15 @@ if(senderistas){
 
 /* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
 
-const submenu = document.querySelectorAll(".submenu");
-const botonesTriangulo = document.querySelectorAll(".fa-circle-chevron-down");
-navListaDesplegable = []
+const submenu = document.querySelectorAll(".submenu"); // constante para seleccionar los elementos con la clase .submenu
+const botonesTriangulo = document.querySelectorAll(".fa-circle-chevron-down"); // constante para seleccionar los elementos con las clase .fa-circle-chevron-down (icono flechita)
 
 if(submenu){
-    botonesTriangulo.forEach((boton,i) => {
-        boton.addEventListener("click", evento => {
-            evento.preventDefault();
-            submenu[i].classList.toggle("visible_submenu");
-            botonesTriangulo[i].classList.toggle("rotate");
+    botonesTriangulo.forEach((boton,i) => { // por cada uno de los iconos, boton y indice de cada boton realizará una función
+        boton.addEventListener("click", evento => { // al hacerle clik a ese boton realizará el siguiente evento
+            evento.preventDefault(); // está función hará que no haga lo que por defecto tiene que hacer
+            submenu[i].classList.toggle("visible_submenu"); // quitará o añadirá la clase .visible_submenu a cada submenu. Con el indice al que le corresponda
+            botonesTriangulo[i].classList.toggle("rotate"); // quitará o añadirá la clase .rotate a cada boton (icono flechita). Con el indice al que le corresponda
         });
     });
 }
@@ -48,18 +47,18 @@ if(submenu){
 
 /* FUNCIONES OCULTAR HEADER AL HACER SCROLL DOWN Y MOSTRARLO AL HACER SCROLL UP (basado en tutorial w3schools) */
 
-let prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.scrollY; // crea una variable con la posición del scroll previa
 const headerSecundario = document.querySelector(".header_secundario");  // constante para seleccionar el elemento con la clase .header_secundario
 
 if(headerSecundario){
     window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-    headerSecundario.style.top = "0px";
+    let currentScrollPos = window.scrollY; // crea una variable con la posición actual del scroll
+    if (prevScrollpos > currentScrollPos) { // si la posición previa es mayor que la actual, es decir, si deslizamos scroll hacia abajo
+    headerSecundario.style.top = "0px"; // la posicion de la cabecera será arriba del todo
     } else {
-    headerSecundario.style.top = "-180px";
+    headerSecundario.style.top = "-180px"; // sino (si delizamos el scroll hacia arriba) la posición de la cabecera será arriba de la pantalla actual
     }
-    prevScrollpos = currentScrollPos;
+    prevScrollpos = currentScrollPos; // para finalizar la posición previa y la actual son iguales, es decir, si seguimos deslizando hacia arriba el scroll seguirá arriba de esa pantalla
     };
 }
 
