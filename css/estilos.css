@@ -320,15 +320,24 @@ footer .fa-brands{
 .bloque_ruta{
     width:100%;
 }
-.img_rutas,.img_entorno{
+.img_rutas,.img_entorno,.mapa_perfil_rutas{
     display:flex;
     justify-content:space-evenly;
     flex-wrap:wrap;
 }
 .contenedor_rutas img, .contenedor_entorno img{
     display:inline-block;
-    padding:20px;
+    margin:20px;
     width:300px;
+    height:300px;
+    border-radius:3%;
+    outline:2px solid rgba(246,178,51,0.5);
+    outline-offset:2px;
+}
+.mapa_perfil_rutas img{
+    display:inline-block;
+    margin:20px;
+    width:600px;
     height:300px;
 }
 .contenedor_entorno h2{
@@ -338,8 +347,7 @@ footer .fa-brands{
     line-height:1.3rem;
 }
 .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
-    margin:25px auto 25px;
-    padding:20px 0px;
+    margin:20px auto 0;
 }
 .margin-top-20px{
     margin-top:20px;
@@ -358,6 +366,13 @@ footer .fa-brands{
     grid-template-columns:repeat(4,auto);
     gap:20px;
 }
+.fondo_mapas{
+    height:100vh;
+}
+.mapas{
+    justify-content:space-between;
+    align-items:flex-end;
+}
 .galeria img,.enlace-mapa{
     border-radius:3%;
     cursor:pointer;
@@ -372,7 +387,7 @@ footer .fa-brands{
     transform:scale(1.2);
     box-shadow:#2f272a;
 }
-.modal_galeria, .modal_consulta{
+.modal_galeria,.modal_consulta{
     width:100%;
     height:100vh;
     position:fixed;
@@ -421,6 +436,9 @@ footer .fa-brands{
 .enlace-mapa{
     border:1px solid #2f272a;
     background-color:#2f272a;
+}
+.enlace-mapa a{
+    text-decoration:none;
 }
 .enlace-mapa img{
     border-top-right-radius:5px;
@@ -601,8 +619,6 @@ input[type="submit"]:hover{
         font-size: 1rem;
     }
     .contenedor_rutas img, .contenedor_entorno img{
-        display:inline-block;
-        padding:20px;
         width:200px;
         height:200px;
     }
@@ -657,17 +673,15 @@ input[type="submit"]:hover{
         width:240px;
     }
     .contenedor_rutas img, .contenedor_entorno img{
-        width:calc(100% - 50px);
-        height:100px;
+        width:200px;
+        height:200px;
+    }
+    .mapa_perfil_rutas img{
+        width:300px;
+        height:150px;
     }
     .bloque_ruta h2{
         font-size:1rem;
-    }
-    .contenedor_rutas img, .contenedor_entorno img{
-        display:inline-block;
-        padding:20px;
-        width:200px;
-        height:200px;
     }
     .galeria,.mapas{
         grid-template-columns: repeat(2,auto);
@@ -851,10 +865,6 @@ input[type="submit"]:hover{
     .derecha_cabecera_ruta{
         width:calc(100% - 50px);
         margin-bottom:5px;
-    }
-    .contenedor_rutas img,.contenedor_entorno img{
-        width:200px;
-        height:200px;
     }
     .bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
         margin:0px;
