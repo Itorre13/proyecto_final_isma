@@ -48,12 +48,12 @@ if(submenu){
 
 /* FUNCIONES OCULTAR HEADER AL HACER SCROLL DOWN Y MOSTRARLO AL HACER SCROLL UP (basado en tutorial w3schools) */
 
-let prevScrollpos = window.scrollY;
+let prevScrollpos = window.pageYOffset;
 const headerSecundario = document.querySelector(".header_secundario");  // constante para seleccionar el elemento con la clase .header_secundario
 
 if(headerSecundario){
     window.onscroll = function() {
-    let currentScrollPos = window.scrollY;
+    let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
     headerSecundario.style.top = "0px";
     } else {

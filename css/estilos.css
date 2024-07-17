@@ -16,6 +16,9 @@ button,input{
     -webkit-appearance:none;
     appearance:none;
 }
+a{
+    text-decoration:none;
+}
 
 /* ESTILOS CABECERA PRINCIPAL Y CABECERA SECUNDARIA */
 
@@ -58,7 +61,6 @@ button,input{
     display:flex;
     align-items:center;
     width:100%;
-    text-decoration:none;
     color:black;
     font-size:1.3rem;
     font-weight:500;
@@ -70,7 +72,7 @@ button,input{
     display:block;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color:rgba(255,255,255,0.8);
+    background-color:rgba(255,255,255,0.9);
     padding:10px;
     cursor:pointer;
     box-shadow:1px 1px 5px -1px #2f272a;
@@ -103,12 +105,13 @@ button,input{
     display:none;
     position:absolute;
     top:45px;
-    left:-9px;
-    width:100%;
+    left:-13px;
+    width:108%;
     border:1px solid rgba(255,255,255,0.8);
     border-radius:20px;
-    background-color: rgba(47,39,42,0.4);
+    background-color: rgba(47,39,42,0.8);
     padding:5px;
+    padding-right:7px;
     cursor:pointer;
     z-index:2;
 }
@@ -155,9 +158,6 @@ footer{
     display:flex;
     justify-content:center;
     align-items:center;
-}
-footer a{
-    text-decoration:none;
 }
 .texto_footer{
     font-size:0.8em;
@@ -258,7 +258,7 @@ footer .fa-brands{
     color:white;
     text-shadow:1px 1px 10px #2f272a;
     text-align:center;
-    padding-top:150px;
+    margin-top:40vh;
 }
 
     /* SECCIONES INTERNAS */
@@ -330,15 +330,15 @@ footer .fa-brands{
     margin:20px;
     width:300px;
     height:300px;
-    border-radius:3%;
+    border-radius:20px;
     outline:2px solid rgba(246,178,51,0.5);
     outline-offset:2px;
 }
 .mapa_perfil_rutas img{
     display:inline-block;
     margin:20px;
-    width:600px;
-    height:300px;
+    width:700px;
+    height:350px;
 }
 .contenedor_entorno h2{
     padding:0px 0px 20px;
@@ -360,7 +360,7 @@ footer .fa-brands{
 }
 
 .galeria,.mapas{
-    margin:50px auto 100px;
+    margin:50px auto 120px;
     width:90%;
     display:grid;
     grid-template-columns:repeat(4,auto);
@@ -437,9 +437,6 @@ footer .fa-brands{
     border:1px solid #2f272a;
     background-color:#2f272a;
 }
-.enlace-mapa a{
-    text-decoration:none;
-}
 .enlace-mapa img{
     border-top-right-radius:5px;
     border-top-left-radius:5px;
@@ -449,7 +446,6 @@ footer .fa-brands{
 }
 .enlace-mapa p{
     color:#fff3e1;
-    text-decoration:none;
     text-align:center;
     font-size:0.8rem;
     padding:5px;
@@ -611,19 +607,8 @@ input[type="submit"]:hover{
         display:block;
         font-size:1rem;
     }
-    .contenedor_rutas img, .contenedor_entorno img{
-        width:150px;
-        height:150px;
-    }
-    .bloque_ruta h2{
-        font-size: 1rem;
-    }
-    .contenedor_rutas img, .contenedor_entorno img{
-        width:200px;
-        height:200px;
-    }
-    .formulario, .texto_localizador_contacto{
-        width:800px;
+    .formulario,.texto_localizador_contacto{
+        width:calc(100% - 70px);
     }
     .texto_localizador_contacto iframe{
         width:800px;
@@ -665,20 +650,16 @@ input[type="submit"]:hover{
         margin:50px auto 50px;
         width:calc(100% - 80px);
     }
-    .contenedor_rutas h3, .contenedor_entorno h3{
-        display:block;
-        font-size:1rem;
-    }
     .derecha_cabecera_ruta{
         width:240px;
     }
-    .contenedor_rutas img, .contenedor_entorno img{
+    .contenedor_rutas img,.contenedor_entorno img{
         width:200px;
         height:200px;
     }
     .mapa_perfil_rutas img{
-        width:300px;
-        height:150px;
+        width:500px;
+        height:250px;
     }
     .bloque_ruta h2{
         font-size:1rem;
@@ -694,10 +675,10 @@ input[type="submit"]:hover{
         width:400px;
         height:400px;
     }
-    .formulario, .texto_localizador_contacto{
-        width:600px;
+    .formulario,.texto_localizador_contacto{
+        width:calc(100% - 60px);
     }
-    .formulario h2, .texto_localizador_contacto h2{
+    .formulario h2,.texto_localizador_contacto h2{
         text-align:center;
         font-size:2rem;
     }
@@ -824,7 +805,8 @@ input[type="submit"]:hover{
     }
     .pg_inicio h2{
         font-size:1.3rem;
-        margin-bottom:100px;
+        padding-top:0;
+        margin-bottom:22vh;
         text-align:center;
     }
     .contenedor_rutas,.contenedor_entorno{
@@ -868,6 +850,10 @@ input[type="submit"]:hover{
     }
     .bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
         margin:0px;
+    }
+    .mapa_perfil_rutas img{
+        width:300px;
+        height:150px;
     }
     .img_rutas{
         width:calc(100% - 20px);
@@ -954,7 +940,7 @@ input[type="submit"]:hover{
     }
     .senderista{
         width:25px;
-        bottom:12.7vh;
+        bottom:12.5vh;
         left:5px;
     }
     .senderista:last-child{
