@@ -147,7 +147,7 @@ a{
     color:#cf5533;
 }
 
-/* PIE DE PAGINA */
+/* ESTILOS PIE DE PAGINA */
 
 footer{
     position:fixed;
@@ -199,7 +199,7 @@ footer .fa-brands{
     margin-left:5px;
 }
 
-/* ANIMACION SENDERISTAS */
+/* ESTILOS ANIMACION SENDERISTAS */
 
 .senderista{
     position:fixed;
@@ -243,7 +243,7 @@ footer .fa-brands{
     }
 }
 
-/* PÁGINA INICIO */
+/* ESTILOS PÁGINA INICIO */
 
 .pg_inicio{
     height:100vh;
@@ -263,7 +263,7 @@ footer .fa-brands{
 
     /* SECCIONES INTERNAS */
 
-/* PÁGINAS RUTAS Y ENTORNO */
+/* ESTILOS PÁGINAS RUTAS Y ENTORNO */
 
 .img_fondo{
     display:block;
@@ -272,8 +272,9 @@ footer .fa-brands{
     background:url("../img/img_fondo_rutas.jpg") no-repeat center;
     background-size:cover;
 }
-.img_fondo_entorno{
+.img_fondo_entorno,.img_fondo_galeria{
     background:url("../img/img_fondo_entorno.jpg") no-repeat center;
+    background-size:cover;
 }
 .contenedor_rutas, .contenedor_entorno{
     margin:50px auto 100px;
@@ -353,21 +354,18 @@ footer .fa-brands{
     margin-top:20px;
 }
 
-/* PAGINAS GALERIA Y MAPAS */
+/* ESTILOS PAGINAS GALERIA Y MAPAS */
 
 .img_fondo_mapas{
     background:url("../img/img_fondo_mapas.jpg") no-repeat center;
+    background-size:cover;
 }
-
 .galeria,.mapas{
     margin:50px auto 120px;
     width:90%;
     display:grid;
     grid-template-columns:repeat(4,auto);
     gap:20px;
-}
-.fondo_mapas{
-    height:100vh;
 }
 .mapas{
     justify-content:space-between;
@@ -454,10 +452,11 @@ footer .fa-brands{
     margin-right:10px;
 }
 
-/* PAGINA CONTACTO */
+/* ESTILO PAGINA CONTACTO */
 
 .img_fondo_contacto{
     background:url("../img/img_fondo_contacto.jpg") no-repeat center;
+    background-size:cover;
 }
 .formulario, .texto_localizador_contacto{
     width:calc(100% - 100px);
@@ -723,7 +722,6 @@ input[type="submit"]:hover{
 
  /* ESTILOS PANTALLAS HASTA 501px */
  
-
 @media screen and (max-width:501px){
     .header_principal{
         height:230px;
@@ -885,12 +883,12 @@ input[type="submit"]:hover{
         width:calc(100% - 50px);
         margin-bottom:5px;
     }
-    .bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
-        margin:0px;
+    .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
+        margin:20px auto 0;
     }
     .mapa_perfil_rutas img{
-        width:300px;
-        height:150px;
+        width:280px;
+        height:140px;
     }
     .img_rutas{
         width:calc(100% - 20px);

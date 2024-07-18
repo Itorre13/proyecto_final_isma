@@ -1,5 +1,3 @@
-
-
 /* FUNCIONES ABRIR Y CERRAR MENU NAVEGACION MOVIL */
 
 const navegacion = document.querySelector(".navegacion"); // constante para seleccionar el elemento con la clase .navegacion

@@ -3,40 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>galeria</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/7e9d2c7fad.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/estilos.css">
-        <script defer src="js/funciones_galeria.js"></script>
-        <script defer src="js/funciones.js"></script>
+        <title>galeria</title><!-- TÍTULO PÁGINA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><!-- ENLACE FUENTES GOOGLEFONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- ENLACE FUENTES GOOGLEFONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- ENLACE FUENTE ARCHIVO GOOGLEFONTS -->
+        <script src="https://kit.fontawesome.com/7e9d2c7fad.js" crossorigin="anonymous"></script><!-- ENLACE ICONOS KIT FONTAWESOME -->
+        <link rel="stylesheet" href="css/estilos.css"><!-- ENLACE CON ARCHIVO ESTILOS.CSS -->
+        <script defer src="js/funciones.js"></script><!-- CONEXIÓN CON ARCHIVO FUNCIONES.JS -->
     </head>
 <body>
     <header class= "header_secundario"><!-- COMIENZO CABECERA SECUNDARIA -->
         <h1><a href="index.html"><img class="logo_inicio" src="img/logo_sangusin_rutas_senderismo_.svg" alt=""></a></h1><!-- ENLACE LOGO A PAGINA INICIO -->
-        <button class="abrir_header_movil"><i class="fa-solid fa-bars"></i></button>
+        <button class="abrir_header_movil"><i class="fa-solid fa-bars"></i></button><!-- BOTÓN VISIBLE SÓLO VERSION MOVIL -->
         <nav class="navegacion"><!-- COMIENZO MENÚ NAVEGACIÓN -->
-            <button class="cerrar_header_movil">x</button>
-            <ul>
+            <button class="cerrar_header_movil">x</button><!-- BOTÓN VISIBLE SÓLO VERSION MOVIL -->
+            <ul><!-- COMIENZO LISTA DESORDENADA ENLACES PÁGINAS INTERNAS -->
                 <li>
                     <a href="rutas.html"><i class="fa-solid fa-location-dot"></i><span>rutas</span><i class="fa-solid fa-circle-chevron-down fa-rotate-90"></i></a>
-                    <ul class="submenu"><!-- COMIENZO MENÚ DESPLEGABLE -->
+                    <ul class="submenu"><!-- COMIENZO SUBMENÚ DESPLEGABLE -->
                         <li><a href="rutas.html#1"><span><i class="fa-solid fa-person-hiking"></i><strong> · Ruta 1</strong><br>Camino Real · Vía Verde</span></a></li>
                         <li><a href="rutas.html#2"><span><i class="fa-solid fa-person-hiking"></i><strong> · Ruta 2</strong><br>Camino Nava de Béjar · Las Mirandillas</span></a></li>
                         <li><a href="rutas.html#3"><span><i class="fa-solid fa-person-hiking"></i><strong> · Ruta 3</strong><br>El Molino · La Barregana<span></span></a></li>
                         <li><a href="rutas.html#4"><span><i class="fa-solid fa-person-hiking"></i><strong> · Ruta 4</strong><br>Los Llanos · El Parador</span></a></li>
                         <li><a href="rutas.html#5"><span><i class="fa-solid fa-person-hiking"></i><strong> · Ruta 5</strong><br>Subida a Tonda</span></a></li>
-                    </ul><!-- FINAL MENÚ DESPLEGABLE-->      
+                    </ul><!-- FINAL SUBMENÚ DESPLEGABLE-->      
                 </li>
                 <li>
                     <a href="entorno.html"><i class="fa-solid fa-location-dot"></i><span>entorno</span><i class="fa-solid fa-circle-chevron-down fa-rotate-90"></i></a>
-                        <ul class="submenu"><!-- COMIENZO MENÚ DESPLEGABLE -->
+                        <ul class="submenu"><!-- COMIENZO SUBMENÚ DESPLEGABLE -->
                             <li><a href="entorno.html#1"><span>· Fuentes de Béjar</span></a></li>
                             <li><a href="entorno.html#2"><span>· Geología y relieve</span></a></li>
                             <li><a href="entorno.html#3"><span>· Flora</span></a></li>
                             <li><a href="entorno.html#4"><span>· Fauna</span></a></li>
-                        </ul><!-- FINAL MENÚ DESPLEGABLE --> 
+                        </ul><!-- FINAL SUBMENÚ DESPLEGABLE --> 
                 </li>  
                 <li id= "seleccionado"><!-- ITEM SELECCIONADO -->
                     <a href="galeria.html"><i class="fa-solid fa-location-dot"></i><span>galeria</span></a>
@@ -46,67 +45,67 @@
                 </li>
                 <li>
                     <a href="contacto.html"><i class="fa-solid fa-location-dot"></i><span>contacto</span><i class="fa-solid fa-circle-chevron-down fa-rotate-90"></i></a>
-                        <ul class="submenu"><!-- COMIENZO MENÚ DESPLEGABLE -->
+                        <ul class="submenu"><!-- COMIENZO SUBMENÚ DESPLEGABLE -->
                             <li><a href="contacto.html#1"><span>· Formulario contacto</span></a></li>
                             <li><a href="contacto.html#2"><span>· Dirección</span></a></li>
-                        </ul><!-- FINAL MENÚ DESPLEGABLE -->
+                        </ul><!-- FINAL SUBMENÚ DESPLEGABLE -->
                 </li>
-            </ul>
+            </ul><!-- FINAL LISTA DESORDENADA ENLACES PÁGINAS INTERNAS -->
         </nav><!-- FINAL MENÚ NAVEGACIÓN -->
     </header><!-- FINAL CABECERA SECUNDARIA -->
-    <section class="contenedor img_fondo img_fondo_entorno">
+    <section class="contenedor img_fondo img_fondo_galeria"><!-- SECCIÓN IMAGEN FONDO PÁGINA GALERIA -->
     </section>
-    <section class="galeria">
-        <a href="img/img_modal_1.jpg"><img src="img/img_modal_1.jpg" alt=""></a>
-        <a href="img/img_modal_2.jpg"><img src="img/img_modal_2.jpg" alt=""></a>
-        <a href="img/img_modal_3.jpg"><img src="img/img_modal_3.jpg" alt=""></a>
-        <a href="img/img_modal_4.jpg"><img src="img/img_modal_4.jpg" alt=""></a>
-        <a href="img/img_modal_5.jpg"><img src="img/img_modal_5.jpg" alt=""></a>
-        <a href="img/img_modal_6.jpg"><img src="img/img_modal_6.jpg" alt=""></a>
-        <a href="img/img_modal_7.jpg"><img src="img/img_modal_7.jpg" alt=""></a>
-        <a href="img/img_modal_8.jpg"><img src="img/img_modal_8.jpg" alt=""></a>
-        <a href="img/img_modal_9.jpg"><img src="img/img_modal_9.jpg" alt=""></a>
-        <a href="img/img_modal_10.jpg"><img src="img/img_modal_10.jpg" alt=""></a>
-        <a href="img/img_modal_11.jpg"><img src="img/img_modal_11.jpg" alt=""></a>
-        <a href="img/img_modal_12.jpg"><img src="img/img_modal_12.jpg" alt=""></a>
-        <a href="img/img_modal_1.jpg"><img src="img/img_modal_1.jpg" alt=""></a>
-        <a href="img/img_modal_2.jpg"><img src="img/img_modal_2.jpg" alt=""></a>
-        <a href="img/img_modal_3.jpg"><img src="img/img_modal_3.jpg" alt=""></a>
-        <a href="img/img_modal_4.jpg"><img src="img/img_modal_4.jpg" alt=""></a>
-        <a href="img/img_modal_5.jpg"><img src="img/img_modal_5.jpg" alt=""></a>
-        <a href="img/img_modal_6.jpg"><img src="img/img_modal_6.jpg" alt=""></a>
-        <a href="img/img_modal_7.jpg"><img src="img/img_modal_7.jpg" alt=""></a>
-        <a href="img/img_modal_8.jpg"><img src="img/img_modal_8.jpg" alt=""></a>
-        <a href="img/img_modal_9.jpg"><img src="img/img_modal_9.jpg" alt=""></a>
-        <a href="img/img_modal_10.jpg"><img src="img/img_modal_10.jpg" alt=""></a>
-        <a href="img/img_modal_11.jpg"><img src="img/img_modal_11.jpg" alt=""></a>
-        <a href="img/img_modal_12.jpg"><img src="img/img_modal_12.jpg" alt=""></a>
-    </section>
-    <div class="modal_galeria">
-        <button>
+    <section class="galeria"><!-- COMIENZO SECCIÓN GALERIA -->
+        <a href="img/img_modal_1.jpg"><img src="img/img_modal_1.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_2.jpg"><img src="img/img_modal_2.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_3.jpg"><img src="img/img_modal_3.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_4.jpg"><img src="img/img_modal_4.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_5.jpg"><img src="img/img_modal_5.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_6.jpg"><img src="img/img_modal_6.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_7.jpg"><img src="img/img_modal_7.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_8.jpg"><img src="img/img_modal_8.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_9.jpg"><img src="img/img_modal_9.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_10.jpg"><img src="img/img_modal_10.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_11.jpg"><img src="img/img_modal_11.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_12.jpg"><img src="img/img_modal_12.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_1.jpg"><img src="img/img_modal_1.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_2.jpg"><img src="img/img_modal_2.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_3.jpg"><img src="img/img_modal_3.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_4.jpg"><img src="img/img_modal_4.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_5.jpg"><img src="img/img_modal_5.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_6.jpg"><img src="img/img_modal_6.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_7.jpg"><img src="img/img_modal_7.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_8.jpg"><img src="img/img_modal_8.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_9.jpg"><img src="img/img_modal_9.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_10.jpg"><img src="img/img_modal_10.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_11.jpg"><img src="img/img_modal_11.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+        <a href="img/img_modal_12.jpg"><img src="img/img_modal_12.jpg" alt=""></a><!-- ENLACE E IMAGEN -->
+    </section><!-- FINAL SECCIÓN GALERIA -->
+    <div class="modal_galeria"><!-- COMIENZO SECCIÓN MODAL-GALERIA -->
+        <button><!-- BOTÓN IZDA CON ENTIDAD HTML '<' E ICONO -->
             <span>&lt;</span>
             <i class="fa-solid fa-person-hiking fa-flip-horizontal"></i>
         </button>
-        <div class="contenedor-img">
-            <div class="boton_cerrar">
+        <div class="contenedor-img"><!-- DIVISIÓN CONTENEDOR IMAGEN -->
+            <div class="boton_cerrar"><!-- CAJITA BOTÓN CERRAR -->
                 <span>x</span>
             </div>
-            <div class="imagenes">
+            <div class="imagenes"><!-- DIVISIÓN IMÁGENES -->
                 <img src="" alt="">
             </div>
         </div>
-        <button>
+        <button><!-- BOTÓN DCHA CON ENTIDAD HTML '>' E ICONO -->
             <i class="fa-solid fa-person-hiking"></i>
             <span>&gt;</span>
         </button>
     </div>
     <footer><!-- COMIENZO PIE DE PÁGINA -->
         <div class="redes_sociales"><!-- COMIENZO ENLACES REDES SOCIALES -->
-            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a><!-- ICONO ENLACE FACEBOOK -->
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a><!-- ICONO ENLACE INSTAGRAM -->
+            <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a><!-- ICONO ENLACE TIKTOK -->
         </div><!-- FINAL ENLACES RESDE SOCIALES -->
-        <a href="index.html" class="texto_footer"><!-- COMIENZO ENLACE TEXTO PIE DE PÁGINA -->
+        <a href="#" class="texto_footer"><!-- COMIENZO ENLACE TEXTO PIE DE PÁGINA -->
             <p>sangusin</p>
             <p>rutas-senderismo</p>
         </a><!-- FINAL ENLACE TEXTO PIE DE PÁGINA -->
