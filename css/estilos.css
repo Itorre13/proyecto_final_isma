@@ -757,8 +757,8 @@ input[type="submit"]:hover{
         transform:scale(1);
     }
     .header_principal .navegacion .submenu {
-        top: 3.3rem;
-        left: 0.4rem;
+        top: 3.1rem;
+        left: -1.2rem;
     }
     .navegacion .submenu li{
         width:calc(100% - 38px);

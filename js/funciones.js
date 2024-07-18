@@ -26,7 +26,6 @@ if(senderistas){
 }
 
 
-
 /* FUNCIONES ABRIR Y CERRAR LISTA DESPLEGABLE EN LOS LI DE NAVEGACION */
 
 const submenu = document.querySelectorAll(".submenu"); // constante para seleccionar los elementos con la clase .submenu
