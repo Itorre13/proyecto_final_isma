@@ -247,7 +247,7 @@ footer .fa-brands{
 
 .pg_inicio{
     height:100vh;
-    background:url("../img/img_1.jpg") no-repeat center;
+    background:url("../img/img_fondo_inicio.jpg") no-repeat center;
     background-size:cover;
     display:flex;
     justify-content:center;
@@ -457,7 +457,7 @@ footer .fa-brands{
 /* PAGINA CONTACTO */
 
 .img_fondo_contacto{
-    background:url("../img/img_fondo_contacto.png") no-repeat center;
+    background:url("../img/img_fondo_contacto.jpg") no-repeat center;
 }
 .formulario, .texto_localizador_contacto{
     width:calc(100% - 100px);
@@ -619,13 +619,16 @@ input[type="submit"]:hover{
 
 @media screen and (max-width:801px){
     .header_secundario ul li{
-        padding:5px;
+        padding:3px;
+    }
+    .header_secundario .logo_inicio{
+        width:70px;
     }
     .navegacion a{
         font-size:0.7rem;
     }
     .navegacion li:not(:last-child){
-        margin-right:10px;
+        margin-right:6px;
     }
     .navegacion ul ul li:not(:last-child){
         margin-right:0px;
@@ -685,12 +688,43 @@ input[type="submit"]:hover{
     .texto_localizador_contacto iframe{
         width:600px;
     }
+    footer{
+        width:100%;
+        height:10vh;    }
+    footer .fa-brands{
+        margin-right:10px;
+    }
+    .redes_sociales{
+        font-size:0.8rem;
+    }
+    .texto_footer{
+        font-size:0.8rem;
+    }
+    .redes_sociales,.texto_footer{
+        margin:5px;
+    }
+    .caja_busqueda{
+        width:120px;
+        margin-left:10px;
+    }
+    .caja_busqueda input {
+        width:65%;
+      }
+    .senderista{
+        width:25px;
+        bottom:12.5vh;
+        left:5px;
+    }
+    .senderista:last-child{
+        width:28px;
+        left:36px;
+    }
 }
 
- /* ESTILOS PANTALLAS HASTA 601px */
+ /* ESTILOS PANTALLAS HASTA 501px */
  
 
-@media screen and (max-width:601px){
+@media screen and (max-width:501px){
     .header_principal{
         height:230px;
         padding:25px;
@@ -699,6 +733,9 @@ input[type="submit"]:hover{
         flex-direction:column;
         height:180px;
         padding:10px;
+    }
+    .header_secundario .logo_inicio{
+        width:100px;
     }
     .header_secundario .navegacion .submenu {
         top: 2.8rem;
