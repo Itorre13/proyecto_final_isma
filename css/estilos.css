@@ -582,9 +582,9 @@ input[type="submit"]:hover{
 
     /* MEDIAQUERIES - ESTILOS RESPONSIVE */
 
- /* ESTILOS PANTALLAS HASTA 1.200px */
+ /* ESTILOS PANTALLAS HASTA 1.201px */
  
-@media screen and (max-width:1200px){
+@media screen and (max-width:1201px){
     .navegacion a{
         font-size:0.9rem;
     }
@@ -684,7 +684,7 @@ input[type="submit"]:hover{
     }
     .texto_localizador_contacto p {
         margin-top: 20px;
-      }
+    }
     .texto_localizador_contacto iframe{
         width:450px;
     }
@@ -709,7 +709,7 @@ input[type="submit"]:hover{
     }
     .caja_busqueda input {
         width:65%;
-      }
+    }
     .senderista{
         width:25px;
         bottom:2.8rem;
@@ -772,7 +772,7 @@ input[type="submit"]:hover{
     .header_principal .submenu.visible_submenu li{
         width: calc(100% - 10px);
         padding: 5px;
-      }
+    }
     .submenu a{
         font-size:0.3rem;
         font-weight:200;
