@@ -17,7 +17,7 @@
         <button class="abrir_header_movil"><i class="fa-solid fa-bars"></i></button><!-- BOTÓN VISIBLE SÓLO VERSION MOVIL -->
         <nav class="navegacion"><!-- COMIENZO MENÚ NAVEGACIÓN -->
             <button class="cerrar_header_movil">x</button><!-- BOTÓN VISIBLE SÓLO VERSION MOVIL -->
-            <ul><!-- COMIENZO LISTA DESORDENADA ENLACES PÁGINAS INTERNAS -->
+            <ul class="menu"><!-- COMIENZO LISTA DESORDENADA ENLACES PÁGINAS INTERNAS -->
                 <li>
                     <a href="rutas.html"><i class="fa-solid fa-location-dot"></i><span>rutas</span><i class="fa-solid fa-circle-chevron-down fa-rotate-90"></i></a>
                     <ul class="submenu"><!-- COMIENZO SUBMENÚ DESPLEGABLE -->
@@ -53,36 +53,38 @@
             </ul><!-- FINAL LISTA DESORDENADA ENLACES PÁGINAS INTERNAS -->
         </nav><!-- FINAL MENÚ NAVEGACIÓN -->
     </header><!-- FINAL CABECERA SECUNDARIA -->
-    <section class="contenedor img_fondo img_fondo_contacto"><!-- SECCIÓN IMAGEN FONDO PÁGINA CONTACTO -->
-    </section>
-    <section class="formulario"><!-- COMIENZO SECCIÓN FORMULARIO -->
-        <h2 id="1">Formulario de contacto</h2>
-            <form method="POST">
-                <input type="text" name="nombre" placeholder="nombre y apellidos" required>
-                <input type="text" name="telefono" placeholder="teléfono" required>
-                <input type="text" name="email" placeholder="email" required>
-                <input type="text" name="asunto" placeholder="asunto" required>
-                <input type="submit" name="enviar">
-            </form>
-    </section><!-- FINAL SECCIÓN FORMULARIO -->
-    <section class="modal_consulta"><!-- COMIENZO CONTENEDOR MODAL -->
-        <div class="consulta_enviada">
-            <div class="boton_cerrar">
-                <span>x</span>
+    <div class="img_fondo img_fondo_contacto"><!-- SECCIÓN IMAGEN FONDO PÁGINA CONTACTO -->
+    </div>
+    <section class="contenedor_contacto"><!-- COMIENZO SECCIÓN PAGINA CONTACTO -->
+        <section class="formulario"><!-- COMIENZO SECCIÓN FORMULARIO -->
+            <h2 id="1">Formulario de contacto</h2>
+                <form method="POST">
+                    <input type="text" name="nombre" placeholder="nombre y apellidos" required>
+                    <input type="text" name="telefono" placeholder="teléfono" required>
+                    <input type="text" name="email" placeholder="email" required>
+                    <input type="text" name="asunto" placeholder="asunto" required>
+                    <input type="submit" name="enviar">
+                </form>
+        </section><!-- FINAL SECCIÓN FORMULARIO -->
+        <section class="modal_consulta"><!-- COMIENZO CONTENEDOR MODAL -->
+            <div class="consulta_enviada">
+                <div class="boton_cerrar">
+                    <span>x</span>
+                </div>
+                <h2>Su consulta ha sido enviada</h2>
+                <p>Le responderemos lo antes posible</p>
+                <p>Gracias!!!</p>
             </div>
-            <h2>Su consulta ha sido enviada</h2>
-            <p>Le responderemos lo antes posible</p>
-            <p>Gracias!!!</p>
-         </div>
-    </section><!-- FINAL CONTENEDOR MODAL-->
-    <section class="texto_localizador_contacto"><!-- COMIENZO SECCIÓN TEXTO_LOCALIZADOR_CONTACTO -->
-        <p class="border">&emsp;<b>Sangusín Rutas-Senderismo</b> es un grupo diverso de amigos apasionados por la naturaleza. Nos reunimos regularmente para explorar senderos, descubrir paisajes impresionantes y disfrutar de la compañía mutua mientras caminamos por diferentes rutas. Nuestra misión es promover un estilo de vida saludable, fomentar el amor por el medio ambiente y fortalecer la amistad a través del senderismo.</p>
-        <h2 id="2">Dirección</h2>
-        <p>&emsp;Nos encontramos en la localidad de Fuentes de Béjar, a 60Km al sur de Salamanca, a 5km de Guijuelo y a 23 de la localidad de Béjar.</p>
-        <br>
-        <p>Latitud: 40.378° N | Longitud: 5.731° O</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420.73213811965337!2d-5.690530754867497!3d40.50886501906278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f0063715f6e43%3A0xeff758ccaa5d2e3d!2s37790%20Fuentes%20de%20B%C3%A9jar%2C%20Salamanca!5e0!3m2!1ses!2ses!4v1720452756768!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><!-- IFRAME ENLACE A GOOGLEMAPS -->
-    </section><!-- FINAL SECCIÓN TEXTO_LOCALIZADOR_CONTACTO -->
+        </section><!-- FINAL CONTENEDOR MODAL-->
+        <section class="texto_localizador_contacto"><!-- COMIENZO SECCIÓN TEXTO_LOCALIZADOR_CONTACTO -->
+            <p class="border">&emsp;<b>Sangusín Rutas-Senderismo</b> es un grupo diverso de amigos apasionados por la naturaleza. Nos reunimos regularmente para explorar senderos, descubrir paisajes impresionantes y disfrutar de la compañía mutua mientras caminamos por diferentes rutas. Nuestra misión es promover un estilo de vida saludable, fomentar el amor por el medio ambiente y fortalecer la amistad a través del senderismo.</p>
+            <h2 id="2">Dirección</h2>
+            <p>&emsp;Nos encontramos en la localidad de Fuentes de Béjar, a 60Km al sur de Salamanca, a 5km de Guijuelo y a 23 de la localidad de Béjar.</p>
+            <br>
+            <p>Latitud: 40.378° N | Longitud: 5.731° O</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420.73213811965337!2d-5.690530754867497!3d40.50886501906278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f0063715f6e43%3A0xeff758ccaa5d2e3d!2s37790%20Fuentes%20de%20B%C3%A9jar%2C%20Salamanca!5e0!3m2!1ses!2ses!4v1720452756768!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><!-- IFRAME ENLACE A GOOGLEMAPS -->
+        </section><!-- FINAL SECCIÓN TEXTO_LOCALIZADOR_CONTACTO -->
+    </section><!-- FINAL SECCIÓN PAGINA CONTACTO -->
     <footer><!-- COMIENZO PIE DE PÁGINA -->
         <div class="redes_sociales"><!-- COMIENZO ENLACES REDES SOCIALES -->
             <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a><!-- ICONO ENLACE FACEBOOK -->

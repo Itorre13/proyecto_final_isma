@@ -9,7 +9,6 @@ body{
     font-optical-sizing:auto;
     font-weight:200;
     font-style:normal;
-    background-image:linear-gradient(to top, #fff3e1, white);
     text-align:justify;
 }
 button,input{
@@ -41,7 +40,7 @@ a{
     height:180px;
     transition:top 500ms;
 }
-.header_principal .fa-person-hiking,.header_secundario .fa-person-hiking{
+.fa-person-hiking{
     color:#cf5533;
 }
 .abrir_header_movil,.cerrar_header_movil{
@@ -53,7 +52,7 @@ a{
 .header_secundario .logo_inicio{
     width:100px;
 }
-.navegacion ul{
+.menu{
     list-style:none;
     display:flex;
 }
@@ -101,7 +100,7 @@ a{
 .navegacion ul li{
     position:relative;
 }
-.navegacion .submenu{
+.submenu{
     display:none;
     position:absolute;
     top:45px;
@@ -115,7 +114,7 @@ a{
     cursor:pointer;
     z-index:2;
 }
-.submenu.visible_submenu{
+.visible_submenu{
     display:block;
 }
 .submenu li{
@@ -143,7 +142,7 @@ a{
 #seleccionado .fa-location-dot,#seleccionado span:nth-child(2){
     color:white;
 }
-#seleccionado .fa-person-hiking .fa-rotate-90{
+.fa-rotate-90{
     color:#cf5533;
 }
 
@@ -278,8 +277,9 @@ footer .fa-brands{
     background-size:cover;
 }
 .contenedor_rutas, .contenedor_entorno{
-    margin:50px auto 100px;
-    width:calc(100% - 100px);
+    padding:50px 50px 100px;
+    background-image:linear-gradient(to top, #fff3e1, white);
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -362,15 +362,15 @@ footer .fa-brands{
     background-size:cover;
 }
 .galeria,.mapas{
-    margin:50px auto 120px;
-    width:90%;
+    padding:50px 50px 100px;
+    background-image:linear-gradient(to top, #fff3e1, white);
+    min-height:100vh;
     display:grid;
     grid-template-columns:repeat(4,auto);
     gap:20px;
 }
 .mapas{
-    justify-content:space-between;
-    align-items:flex-end;
+    align-content:flex-start;
 }
 .galeria img,.enlace-mapa{
     border-radius:3%;
@@ -458,6 +458,10 @@ footer .fa-brands{
 .img_fondo_contacto{
     background:url("../img/img_fondo_contacto.jpg") no-repeat center;
     background-size:cover;
+}
+.contenedor_contacto{
+    background-image:linear-gradient(to top, #fff3e1, white);
+    min-height:100vh;
 }
 .formulario,.texto_localizador_contacto{
     width:calc(100% - 100px);
@@ -582,26 +586,18 @@ input[type="submit"]:hover{
  
 @media screen and (max-width:1200px){
     .navegacion a{
-        font-size:0.7rem;
+        font-size:0.9rem;
     }
-    .header_principal .navegacion .submenu{
-        top:2.1rem;
-        left:-0.5rem;
-    }
-    .header_secundario .navegacion .submenu{
-        top:1.5rem;
-        left:-0.5rem;
+    .submenu.visible_submenu{
+        top:2.3rem;
+        left:-1.1rem;
     }
     .submenu li{
         width:calc(100% - 20px);
     }
     .submenu a{
-        font-size:0.4rem;
+        font-size:0.5rem;
         font-weight:200;
-    }
-    .contenedor_rutas,.contenedor_entorno{
-        margin:50px auto 50px;
-        width:780px;
     }
     .contenedor_rutas h3,.contenedor_entorno h3{
         display:block;
@@ -611,7 +607,7 @@ input[type="submit"]:hover{
         width:calc(100% - 70px);
     }
     .texto_localizador_contacto iframe{
-        width:800px;
+        width:700px;
     }
 }
 
@@ -624,34 +620,35 @@ input[type="submit"]:hover{
     .header_secundario .logo_inicio{
         width:70px;
     }
+    .header_principal .submenu.visible_submenu{
+        top:2rem;
+        left:-3.4rem;
+        width:150%;
+    }
+    .header_principal .submenu.visible_submenu li{
+        width: calc(100% - 10px);
+        padding: 5px;
+    }
+    .submenu.visible_submenu{
+        top:1.3rem;
+        left:-2.5rem;
+        width:150%;
+    }
     .navegacion a{
         font-size:0.7rem;
+    }
+    .submenu li{
+        width:calc(100% - 5px);
+        padding:18px;
+    }
+    .submenu a{
+        font-size:0.5rem;
     }
     .navegacion li:not(:last-child){
         margin-right:6px;
     }
     .navegacion ul ul li:not(:last-child){
         margin-right:0px;
-      }
-    .navegacion .submenu li{
-        width:calc(100% - 22px);
-        padding:10px;
-    }
-    .header_principal .navegacion .submenu{
-        top:2.1rem;
-        left:-0.5rem;
-    }
-    .header_secundario .navegacion .submenu{
-        top:1.5rem;
-        left:-0.5rem;
-    }
-    .submenu a{
-        font-size:0.4rem;
-        font-weight:200;
-    }
-    .contenedor_rutas,.contenedor_entorno{
-        margin:50px auto 50px;
-        width:calc(100% - 80px);
     }
     .derecha_cabecera_ruta{
         width:240px;
@@ -685,8 +682,11 @@ input[type="submit"]:hover{
         text-align:center;
         font-size:2rem;
     }
+    .texto_localizador_contacto p {
+        margin-top: 20px;
+      }
     .texto_localizador_contacto iframe{
-        width:600px;
+        width:450px;
     }
     footer{
         height:1.8rem;
@@ -736,10 +736,6 @@ input[type="submit"]:hover{
     .header_secundario .logo_inicio{
         width:100px;
     }
-    .header_secundario .navegacion .submenu {
-        top:2.8rem;
-        left:-0.5rem;
-    }
     .navegacion{
         display:block;
         position:fixed;
@@ -751,37 +747,47 @@ input[type="submit"]:hover{
         padding:50px;
         transition:top 0.8s;
     }
+    .navegacion ul{
+        flex-direction:column;
+    }
+    .header_secundario ul li{
+        padding:8px;
+    }
     .navegacion li:hover{
         transform:none;
     }
     .navegacion ul li ul li:hover{
         transform:scale(1);
     }
-    .header_principal .navegacion .submenu {
-        top:3.1rem;
-        left:-1.2rem;
+    .header_principal .submenu.visible_submenu {
+        top:2.6rem;
+        left:0.4rem;
+        width:94%;
+      }
+    .header_principal .submenu.visible_submenu li{
+        width: calc(100% - 10px);
+        padding: 5px;
+      }
+    .submenu a{
+        font-size:0.3rem;
+        font-weight:200;
     }
-    .navegacion .submenu li{
-        width:calc(100% - 38px);
-        padding:18px;
-    }
-    .navegacion ul{
-        flex-direction:column;
-    }
-    .navegacion .submenu li br:nth-child(4){
+    .submenu li br:nth-child(4){
         display:none;
     }
     .navegacion ul li{
         display:flex;
-        justify-content:center;
         align-items:center;
         height:5vh;
     }
     .navegacion ul li a{
         font-size:1.2rem;
     }
+    .navegacion li:first-child a .fa-rotate-90{
+        margin-left:2.4rem;
+    }
     .navegacion ul ul li a{
-        font-size:0.8rem;
+        font-size:0.6rem;
         padding:10px;
     }
     .navegacion li:not(:first-child){
@@ -792,15 +798,6 @@ input[type="submit"]:hover{
     }
     .navegacion .fa-rotate-90{
         font-size:1.5rem;
-    }
-    .navegacion li:first-child .fa-rotate-90{
-        margin-left:7.2rem;
-    }
-    .navegacion li:nth-child(2) .fa-rotate-90{
-        margin-left:5.8rem;
-    }
-    .navegacion li:last-child .fa-rotate-90{
-        margin-left:5.3rem;
     }
     .desplegado{
         top:0vh;
@@ -835,7 +832,6 @@ input[type="submit"]:hover{
         width:100px;
     }
     .pg_inicio{
-        height:90vh;
         flex-direction:column;
         justify-content:flex-end;
     }
@@ -845,9 +841,8 @@ input[type="submit"]:hover{
         margin-bottom:22vh;
         text-align:center;
     }
-    .contenedor_rutas,.contenedor_entorno{
-        margin:20px auto 100px;
-        width:calc(100% - 40px);
+    .contenedor_rutas, .contenedor_entorno{
+        padding:20px 15px 100px;
     }
     .contenedor_rutas h2{
         display:block;
