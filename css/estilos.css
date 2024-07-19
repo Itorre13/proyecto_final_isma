@@ -165,6 +165,7 @@ footer{
     text-transform:uppercase;
     color:white;
     display:flex;
+    cursor:pointer;
 }
 .texto_footer :last-child{
     color:#cf5533;
@@ -458,7 +459,7 @@ footer .fa-brands{
     background:url("../img/img_fondo_contacto.jpg") no-repeat center;
     background-size:cover;
 }
-.formulario, .texto_localizador_contacto{
+.formulario,.texto_localizador_contacto{
     width:calc(100% - 100px);
     margin:50px auto 0px;
     display:flex;
@@ -469,7 +470,7 @@ footer .fa-brands{
 .texto_localizador_contacto{
     margin:0px auto 50px;
 }
-.formulario h2, .texto_localizador_contacto h2{
+.formulario h2,.texto_localizador_contacto h2{
     display:block;
     font-size:3rem;
 }
@@ -568,7 +569,7 @@ input[type="submit"]:hover{
     align-items:center;
 }
 .boton_cerrar span:hover{
-    color: #1dbdbb;
+    color:#1dbdbb;
     font-weight:400;
 }
 .visible{
@@ -598,11 +599,11 @@ input[type="submit"]:hover{
         font-size:0.4rem;
         font-weight:200;
     }
-    .contenedor_rutas, .contenedor_entorno{
+    .contenedor_rutas,.contenedor_entorno{
         margin:50px auto 50px;
         width:780px;
     }
-    .contenedor_rutas h3, .contenedor_entorno h3{
+    .contenedor_rutas h3,.contenedor_entorno h3{
         display:block;
         font-size:1rem;
     }
@@ -688,8 +689,8 @@ input[type="submit"]:hover{
         width:600px;
     }
     footer{
-        width:100%;
-        height:10vh;    }
+        height:1.8rem;
+    }
     footer .fa-brands{
         margin-right:10px;
     }
@@ -711,7 +712,7 @@ input[type="submit"]:hover{
       }
     .senderista{
         width:25px;
-        bottom:12.5vh;
+        bottom:2.8rem;
         left:5px;
     }
     .senderista:last-child{
@@ -736,8 +737,8 @@ input[type="submit"]:hover{
         width:100px;
     }
     .header_secundario .navegacion .submenu {
-        top: 2.8rem;
-        left: -0.5rem;
+        top:2.8rem;
+        left:-0.5rem;
     }
     .navegacion{
         display:block;
@@ -757,8 +758,8 @@ input[type="submit"]:hover{
         transform:scale(1);
     }
     .header_principal .navegacion .submenu {
-        top: 3.1rem;
-        left: -1.2rem;
+        top:3.1rem;
+        left:-1.2rem;
     }
     .navegacion .submenu li{
         width:calc(100% - 38px);
@@ -862,9 +863,6 @@ input[type="submit"]:hover{
     .contenedor_rutas p,.contenedor_entorno p{
         font-size:0.6rem;
     }
-    .contenedor_entorno p{
-        line-height: 0.8rem;
-    }
     .cabecera_ruta{
         flex-direction:column;
         align-items:center;
@@ -954,8 +952,7 @@ input[type="submit"]:hover{
         font-size:1rem;
     }
     footer{
-        width:100%;
-        height:10vh;
+        height:3rem;
         flex-direction:column;
     }
     footer .fa-brands{
@@ -975,7 +972,7 @@ input[type="submit"]:hover{
     }
     .senderista{
         width:25px;
-        bottom:12.5vh;
+        bottom:4rem;
         left:5px;
     }
     .senderista:last-child{
