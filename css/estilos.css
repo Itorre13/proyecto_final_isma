@@ -762,12 +762,12 @@ input[type="submit"]:hover{
     .header_principal .submenu.visible_submenu {
         top:2.6rem;
         left:0.4rem;
-        width:90%;
+        width:100%;
     }
     .submenu.visible_submenu {
         top:2.6rem;
         left:0.4rem;
-        width:90%;
+        width:100%;
     }
     .header_principal .submenu.visible_submenu li{
         width: calc(100% - 10px);
