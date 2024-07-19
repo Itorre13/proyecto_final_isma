@@ -13,6 +13,7 @@ if(botones){
     botones.forEach( boton => boton.addEventListener("click", toggleNavegacion)); // por cada botón al hacer click invocará la función para quitar o poner la clase .desplegado
 }
 
+
 /* FUNCIONES ANIMACION SENDERISTAS FOOTER */
 
 const senderistas = document.querySelectorAll(".senderista"); // constante para seleccionar los elementos con la clase .senderista
@@ -58,7 +59,6 @@ if(headerSecundario){
     prevScrollpos = currentScrollPos; // para finalizar la posición previa y la actual son iguales, es decir, si seguimos deslizando hacia arriba el scroll seguirá arriba de esa pantalla
     };
 }
-
 
 
 /* FUNCIONES MODAL GALERIA */

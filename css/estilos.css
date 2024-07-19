@@ -276,7 +276,7 @@ footer .fa-brands{
     background:url("../img/img_fondo_entorno.jpg") no-repeat center;
     background-size:cover;
 }
-.contenedor_rutas, .contenedor_entorno{
+.contenedor_rutas,.contenedor_entorno{
     padding:50px 50px 100px;
     background-image:linear-gradient(to top, #fff3e1, white);
     min-height:100vh;
@@ -285,7 +285,7 @@ footer .fa-brands{
     justify-content:center;
     align-items:center;
 }
-.contenedor_rutas h3, .contenedor_entorno h3{
+.contenedor_rutas h3,.contenedor_entorno h3{
     font-size:2rem;
     text-transform:uppercase;
 }
@@ -327,7 +327,7 @@ footer .fa-brands{
     justify-content:space-evenly;
     flex-wrap:wrap;
 }
-.contenedor_rutas img, .contenedor_entorno img{
+.contenedor_rutas img,.contenedor_entorno img{
     display:inline-block;
     margin:20px;
     width:300px;
@@ -348,7 +348,7 @@ footer .fa-brands{
 .contenedor_entorno p{
     line-height:1.3rem;
 }
-.bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
+.bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
     margin:20px auto 0;
 }
 .margin-top-20px{
@@ -841,7 +841,7 @@ input[type="submit"]:hover{
         margin-bottom:22vh;
         text-align:center;
     }
-    .contenedor_rutas, .contenedor_entorno{
+    .contenedor_rutas,.contenedor_entorno{
         padding:20px 15px 100px;
     }
     .contenedor_rutas h2{
@@ -859,7 +859,7 @@ input[type="submit"]:hover{
         font-size:0.6rem;
     }
     .contenedor_entorno p{
-        line-height: 1rem;
+        line-height:1rem;
     }
     .cabecera_ruta{
         flex-direction:column;
@@ -879,7 +879,7 @@ input[type="submit"]:hover{
         width:calc(100% - 50px);
         margin-bottom:5px;
     }
-    .bloque_ruta:not(:first-child), .bloque_entorno:not(:first-child){
+    .bloque_ruta:not(:first-child),.bloque_entorno:not(:first-child){
         margin:20px auto 0;
     }
     .mapa_perfil_rutas img{
