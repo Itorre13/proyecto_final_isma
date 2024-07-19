@@ -863,6 +863,9 @@ input[type="submit"]:hover{
     .contenedor_rutas p,.contenedor_entorno p{
         font-size:0.6rem;
     }
+    .contenedor_entorno p{
+        line-height: 1.1rem;
+    }
     .cabecera_ruta{
         flex-direction:column;
         align-items:center;
